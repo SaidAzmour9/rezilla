@@ -79,3 +79,35 @@ html {
 .border-none {
     border: none;
 }
+
+@keyframes slid {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.anSlid{
+    animation: 5s slid infinite linear;
+    display: inline-block;
+}
+
+
+
+@media (min-width: 1024px) {
+    .anSlid {
+       animation: none;
+    }
+}
+
+
+.circle{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    border-radius: 50%;
+    background: linear-gradient(to top, #ffffff, #4361EE);
+    opacity: 50%;
+}
