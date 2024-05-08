@@ -90,7 +90,7 @@ html {
 }
 
 .anSlid{
-    animation: 5s slid infinite linear;
+    animation: 25s slid infinite linear;
     display: inline-block;
 }
 

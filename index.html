@@ -30,7 +30,7 @@
   <title>Rezilla</title>
 </head>
 <body class="">
-    <header class="hederImg pb-[80px]">
+    <header class="hederImg pb-[-10px] lg:pb-[80px]">
         <div class="hidden md:flex justify-between px-[100px] bg-move text-white py-4">
           <div>
             <span>Rezilla, 18 Grattan St, Brooklyn</span>
@@ -63,8 +63,29 @@
               <a href="#" class="text-white bg-move rounded-full p-3"><i class="ri-home-8-line text-white bg-move rounded-full p-1 "></i>Add listing</a>
             </div>
           </div>
-          <div class="lg:hidden"><i class="ri-menu-line text-[25px] cursor-pointer"></i></div>
+          <div class="lg:hidden"><i class="ri-menu-line text-[25px] cursor-pointer" id="burger-icon"></i></div>
         </nav>
+        <!-- starting mobile nav -->
+        <div class="hidden flex flex-col space-y-6 text-center m-auto" id="mobile-menu">
+          <ul class=" flex flex-col space-y-6 text-center m-auto">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Listings</a></li>
+            <li><a href="#">Services</a></li>
+
+          </ul>
+          <div class="">
+            <a href="#" class="font-semibold text-[20px]"><i class="ri-home-8-line mx-2 text-white bg-move rounded-full p-1 "></i>Rezilla</a>
+          </div>
+          <div class="">
+            <div class="">
+              <a href="#"><i><i class="ri-user-line"></i></i><span>Login/Register</span></a>
+            </div>
+            <div class="mt-4">
+              <a href="#" class="text-white bg-move rounded-full p-3"><i class="ri-home-8-line text-white bg-move rounded-full p-1 "></i>Add listing</a>
+            </div>
+          </div>
+        </div>
         <!--  -->
         <div class="lg:grid lg:grid-cols-2 px-[30px] lg:px-[131px] mt-[89px] pb-[53px]">
           <div class="">
@@ -84,10 +105,10 @@
           </div>
             
           </div>
-          <form class="bg-white rounded-lg pt-12 px-4 mx-6 mt-24">
+          <form class="bg-white rounded-lg py-12 px-4 mx-6 mt-24">
             <div class="flex justify-between text-center text-lg pt-4 pb-2">
-                <p class="text-move font-bold ml-12">For Sale</p>
-                <p class="font-bold mr-12">For Rent</p>
+                <p class="text-move font-bold ml-2 lg:ml-12">For Sale</p>
+                <p class="font-bold mr-2 lg:mr-12">For Rent</p>
             </div>
             <hr class="bg-gray-light-alpha">
             <div class="flex flex-col">
@@ -109,18 +130,18 @@
         </div>
     </header>
     <div class="lg:w-[800px] m-auto lg:pl-[100px] mt-[-60px] ">
-      <div class="flex flex-col lg:flex-row  lg:space-x-4 space-y-0 space-x-0 lg:space-y-4 m-auto w-full justify-center">
+      <div class="hidden lg:flex flex-col lg:flex-row  lg:space-x-4 space-y-0 space-x-0 lg:space-y-4 m-auto w-full justify-center">
         <div class="bg-white py-2 rounded-lg flex justify-center lg:mt-4 lg:w-[320px]">
-          <img src="images/Group20.png" alt="">
+          <img src="images/Group20.png" alt="" class="h-[36px]">
           <p>72k+ Happy <br> Customers</p>
         </div>
         <div class="bg-white py-2 rounded-lg flex justify-center lg:w-[320px]">
-          <img src="images/Ellipse3.png" alt="">
+          <img src="images/Ellipse3.png" alt="" class="h-[60px]">
           <p>200+ New <br>Listings Everyday!</p>
         </div>
       </div>
     </div>
-    <section class="relative lg:px-[140px] mt-[68px]">
+    <section class="relative px-[40px] lg:px-[140px] mt-[68px]">
       <h2 class="text-[#808080] text-center my-[50px]">Trusted by 100+ Companies across the globe! </h2>
       <span class="hidden lg:block absolute top-[-50px] circle left-[260px]"></span>
       <div class=" overflow-hidden whitespace-nowrap mt-[60px]">
@@ -133,27 +154,153 @@
         </div>
       </div>
     </section>
-    <section class="lg:px-[140px] mt-[68px]">
-      <div>
-        <div>
-          <span>WHO ARE WE</span>
-          <h2>Assisting individuals in locating the appropriate real estate.</h2>
-          <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.</p>
-        </div>
-        <div>
-          <img src="" alt="">
-          <div>
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
-        <div>
-          <img src="" alt="">
-          <div>
-            <h3></h3>
-            <p></p>
-          </div>
+    <div class="flex lg:hidden flex-col space-y-0 space-x-0 m-auto w-full justify-center my-[40px]">
+      <div class="bg-white py-2 rounded-lg flex justify-center lg:mt-4 lg:w-[320px]">
+        <img src="images/Group20.png" alt="" class="h-[36px]">
+        <p>72k+ Happy <br> Customers</p>
       </div>
+      <div class="bg-white py-2 rounded-lg flex justify-center lg:w-[320px]">
+        <img src="images/Ellipse3.png" alt="" class="h-[60px]">
+        <p>200+ New <br>Listings Everyday!</p>
+      </div>
+    </div>
+    <section class="lg:px-[140px] px-[40px] mt-[68px] lg:grid lg:grid-cols-2">
+      <div>
+        <div class="pr-10">
+          <span class="text-move text-[19px] mb-[30px]">WHO ARE WE</span>
+          <h2 class=" text-dblack font-bold text-[18px] lg:text-[39px] my-4">Assisting individuals in locating the appropriate real estate.</h2>
+          <p class="text-gray">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.</p>
+        </div>
+        <div class="my-4 hidden lg:block">
+          <div class="flex space-x-4 w-[80%] items-center mb-3 bg-white">
+            <img src="images/🦆 icon _smart home_.png" alt="">
+            <div>
+              <h3 class="text-[#4361EE] text-[19px] leading-[29px] mb-1">Donec porttitor euismod</h3>
+              <p class="text-gray font-light text-4">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+            </div>
+          </div>
+          <div class="flex space-x-4 w-[80%] items-center bg-white">
+            <img src="images/user.png" alt="">
+            <div>
+              <h3 class="text-[#4361EE] text-[19px] leading-[29px] mb-1">Donec porttitor euismod</h3>
+              <p class="text-gray font-light text-4">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 my-6 lg:my-0">
+        <img src="images/swim.png" alt="" class="mt-4 h-[260px] lg:h-[500px]">
+        <div class="flex flex-col">
+          <img src="images/room.png" alt="" class="">
+          <img src="images/arc.png" alt="">
+        </div>
+      </div>
+      <div class="my-4 lg:hidden block">
+        <div class="flex space-x-4 lg:w-[80%] items-center mb-3 bg-white">
+          <img src="images/🦆 icon _smart home_.png" alt="">
+          <div>
+            <h3 class="text-[#4361EE] text-[19px] leading-[29px] mb-1">Donec porttitor euismod</h3>
+            <p class="text-gray font-light text-4">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+          </div>
+        </div>
+        <div class="flex space-x-4 lg:w-[80%] items-center bg-white">
+          <img src="images/user.png" alt="">
+          <div>
+            <h3 class="text-[#4361EE] text-[19px] leading-[29px] mb-1">Donec porttitor euismod</h3>
+            <p class="text-gray font-light text-4">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-[#D4D4D4] py-[80px]">
+      <section class="lg:px-[140px] px-[40px] text-center">
+        <h3 class="text-[#2B2B2B] text-[19px] leading-[29px] font-normal ">OUR SERVICES</h3>
+        <p class="text-[#0B090A] mt-[40px] mb-[70px] text-[39px] leading-[47px] font-semibold">Donec porttitor euismod dignissim</p>
+        <div class="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
+          <div class="bg-white p-[40px] rounded-lg">
+            <img src="images/search.png" alt="" class="m-auto bg-[#4361EE] p-2 rounded-full">
+            <h4 class="pt-[30px] pb-[20px] text-[#2B2B2B] text-[19px] leading-[29px] font-normal">Buy a New Home</h4>
+            <p class="text-[#808080]">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+          </div>
+          <div class="bg-white p-[40px] rounded-lg">
+            <img src="images/Vector.png" alt="" class="m-auto bg-[#4361EE] p-2 rounded-full">
+            <h4 class="pt-[30px] pb-[20px] text-[#2B2B2B] text-[19px] leading-[29px] font-normal">Buy a New Home</h4>
+            <p class="text-[#808080]">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+          </div>
+          <div class="bg-white p-[40px] rounded-lg">
+            <img src="images/🦆 icon _bed_.png" alt="" class="m-auto bg-[#4361EE] p-2 rounded-full">
+            <h4 class="pt-[30px] pb-[20px] text-[#2B2B2B] text-[19px] leading-[29px] font-normal">Buy a New Home</h4>
+            <p class="text-[#808080]">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+          </div>
+        </div>
+    </section>
+    </div>
+    <section class="lg:px-[140px] px-[40px] py-[180px]">
+      <div>
+        <h2 class="text-[#4361EE] text-[19px] mb-[20px]">AREAS ACROSS THE TOWN</h2>
+        <p class=" text-dblack font-bold text-[39px] lg:text-[47px] my-4">Neighborhood Properties</p>
+        <div class="grid grid-cols-2 lg:grid-cols-3">
+          <div class="relative text-white"> 
+            <img src="images/newyourk.png" alt="">
+            <div class="absolute bottom-16 left-12">
+              <span class="text-[57px] leading-[66px] font-bold">216</span>
+              <p class="text-[19px] leading-[29px] font-normal">New York City, NY</p>
+            </div>
+          </div>
+          <div class="relative text-white"> 
+            <img src="images/newyourk.png" alt="">
+            <div class="absolute bottom-16 left-12">
+              <span class="text-[57px] leading-[66px] font-bold">216</span>
+              <p class="text-[19px] leading-[29px] font-normal">New York City, NY</p>
+            </div>
+          </div>
+          <div class="relative text-white"> 
+            <img src="images/newyourk.png" alt="">
+            <div class="absolute bottom-16 left-12">
+              <span class="text-[57px] leading-[66px] font-bold">216</span>
+              <p class="text-[19px] leading-[29px] font-normal">New York City, NY</p>
+            </div>
+          </div>
+          <div class="relative text-white"> 
+            <img src="images/newyourk.png" alt="">
+            <div class="absolute bottom-16 left-12">
+              <span class="text-[57px] leading-[66px] font-bold">216</span>
+              <p class="text-[19px] leading-[29px] font-normal">New York City, NY</p>
+            </div>
+          </div>
+          <div class="relative text-white"> 
+            <img src="images/newyourk.png" alt="">
+            <div class="absolute bottom-16 left-12">
+              <span class="text-[57px] leading-[66px] font-bold">216</span>
+              <p class="text-[19px] leading-[29px] font-normal">New York City, NY</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="text-[#4361EE] text-center text-[19px] mb-[20px] mt-[80px]">Introduce yourself to </h2>
+      <p class=" text-dblack font-bold text-center text-[39px] lg:text-[47px] mt-4 mb-[100px]">Our Team of Experts</p>
+      <div class="grid grid-cols-2 grid-cols-4 ">
+        <div>
+          <img src="images/brendon.png" alt="" class="m-auto">
+          <h3 class="my-[30px] text-center">Brendon M</h3>
+          <p class="text-[#4361EE] text-center">CEO & Founder</p>
+        </div>
+        <div>
+          <img src="images/jordi.png" alt="" class="m-auto">
+          <h3 class="my-[30px] text-center">Brendon M</h3>
+          <p class="text-[#4361EE] text-center">CEO & Founder</p>
+        </div>
+        <div>
+          <img src="images/justin.png" alt="" class="m-auto">
+          <h3 class="my-[30px] text-center">Brendon M</h3>
+          <p class="text-[#4361EE] text-center">CEO & Founder</p>
+        </div>
+        <div>
+          <img src="images/susan.png" alt="" class="m-auto">
+          <h3 class="my-[30px] text-center">Brendon M</h3>
+          <p class="text-[#4361EE] text-center">CEO & Founder</p>
+        </div>
       </div>
     </section>
 

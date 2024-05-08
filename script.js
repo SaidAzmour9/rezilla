@@ -1,3 +1,7 @@
+let mobileBtn = document.querySelector("#burger-icon");
+let mobileMenu = document.querySelector("#mobile-menu");
+let menuAs = document.querySelectorAll("#mobile-menu ul li a");
+
 let slideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const pagination = document.querySelector('.pagination');
@@ -52,3 +56,13 @@ function goToSlide(index) {
     showSlides();
 }
 
+
+mobileBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuAs.forEach(a => {
+        a.addEventListener('focus', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+        })
+    });
+})
