@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
@@ -94,32 +95,32 @@
             </div>
           </div>
         </div>
-        <nav class="flex text-dgray justify-between px-[30px] lg:px-[100px] py-[22px]">
+        <nav class="flex text-dgray justify-between px-[30px] lg:px-[100px] py-[22px] ">
           <ul class="hidden lg:flex justify-between space-x-4">
-            <li><a href="#"></a>Home</li>
-            <li><a href="#"></a>About</li>
-            <li><a href="#"></a>Listings</li>
-            <li><a href="#"></a>Services</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Listings</a></li>
+            <li><a href="#">Services</a></li>
 
           </ul>
           <div>
-            <a href="#"><i>Rezilla</i></a>
+            <a href="#" class="font-semibold text-[20px]"><i class="ri-home-8-line mx-2 text-white bg-move rounded-full p-1 "></i>Rezilla</a>
           </div>
           <div class="hidden lg:flex justify-between">
-            <div>
-              <a href="#"><i></i><span>Login/Register</span></a>
+            <div class="mr-4">
+              <a href="#"><i><i class="ri-user-line"></i></i><span>Login/Register</span></a>
             </div>
             <div>
-              <a href="#"><i></i>Add listing</a>
+              <a href="#" class="text-white bg-move rounded-full p-3"><i class="ri-home-8-line text-white bg-move rounded-full p-1 "></i>Add listing</a>
             </div>
           </div>
           <div class="lg:hidden">ddd</div>
         </nav>
         <!--  -->
-        <div class="lg:grid lg:grid-cols-2 px-[30px] lg:px-[141px] mt-[89px] pb-[53px]">
+        <div class="lg:grid lg:grid-cols-2 px-[30px] lg:px-[131px] mt-[89px] pb-[53px]">
           <div class="">
             <span class="text-move text-[19px] mb-[30px]">REAL ESTATE</span>
-            <h1 class=" text-dblack font-bold text-[39px] lg:text-[57px] my-4">Find a perfect home <br> you love..!</h1>
+            <h1 class=" text-dblack font-bold text-[39px] lg:text-[55px] my-4">Find a perfect <br> home you love..!</h1>
             <p class="text-gray">Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.</p>
             <span></span>
             <div class="slider relative">
@@ -133,10 +134,10 @@
           </div>
             
           </div>
-          <form class="bg-white rounded-lg py-[24px] px-4">
-            <div class="flex justify-between text-[16px]  pt-4 pb-2">
-              <p>For Sale</p>
-              <p>For Rent</p>
+          <form class="bg-white rounded-lg pt-[24px] px-4 mx-6 mt-[60px]">
+            <div class="flex justify-between text-center text-[16px]  pt-4 pb-2">
+              <p class="text-move font-bold ml-[60px] ">For Sale</p>
+              <p class=" font-bold mr-[60px]">For Rent</p>
             </div>
             <hr class="bg-gray">
             <div class="flex flex-col">
@@ -152,8 +153,9 @@
                 <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
               </select>
               <input type="text" placeholder="New York, San Francisco, etc" class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px]">
-            </div>     
-      </form>
+            </div>  
+            <button class="mt-[60px] w-2/3 m-auto bg-move text-white text-center"><i>Search</i></button>   
+          </form>
           <div class="lg:w-[800px] m-auto lg:pl-[100px] mt-7 ">
             <div class="lg:flex space-x-4 space-y-4 m-auto">
               <div class="bg-white py-2 rounded-lg flex lg:w-[320px]">
