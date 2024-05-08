@@ -8,58 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style type="text/tailwindcss">
-        .slider {
-            overflow: hidden;
-            width: 100%;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .slide {
-            min-width: 100%;
-        }
-
-        /* Buttons */
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1000;
-            color: #000;
-            font-size: 14px;
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 50%;
-        }
-
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
-
-        @layer utilities {
-        .hederImg {
-            background-image: url("images/Rectangle 4.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-        }
-        @layer base {
-        html {
-          font-family: "Poppins", sans-serif;
-        }
-    }
-    </style>
+    <link rel="stylesheet" href="style.css">
   <script>
     tailwind.config = {
       theme: {
@@ -114,7 +63,7 @@
               <a href="#" class="text-white bg-move rounded-full p-3"><i class="ri-home-8-line text-white bg-move rounded-full p-1 "></i>Add listing</a>
             </div>
           </div>
-          <div class="lg:hidden">ddd</div>
+          <div class="lg:hidden"><i class="ri-menu-line text-[25px] cursor-pointer"></i></div>
         </nav>
         <!--  -->
         <div class="lg:grid lg:grid-cols-2 px-[30px] lg:px-[131px] mt-[89px] pb-[53px]">
@@ -131,31 +80,32 @@
               </div>
               <div class="prev" onclick="prevSlide()">&#10094;</div>
               <div class="next" onclick="nextSlide()">&#10095;</div>
+              <div class="pagination"></div>
           </div>
             
           </div>
-          <form class="bg-white rounded-lg pt-[24px] px-4 mx-6 mt-[60px]">
-            <div class="flex justify-between text-center text-[16px]  pt-4 pb-2">
-              <p class="text-move font-bold ml-[60px] ">For Sale</p>
-              <p class=" font-bold mr-[60px]">For Rent</p>
+          <form class="bg-white rounded-lg pt-12 px-4 mx-6 mt-24">
+            <div class="flex justify-between text-center text-lg pt-4 pb-2">
+                <p class="text-move font-bold ml-12">For Sale</p>
+                <p class="font-bold mr-12">For Rent</p>
             </div>
-            <hr class="bg-gray">
+            <hr class="bg-gray-light-alpha">
             <div class="flex flex-col">
-              <input type="text" placeholder="New York, San Francisco, etc" class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px]">
-              <select class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray border-none">
-                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
-                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
-                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
-              </select>
-              <select class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray border-none">
-                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
-                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
-                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
-              </select>
-              <input type="text" placeholder="New York, San Francisco, etc" class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px]">
-            </div>  
-            <button class="mt-[60px] w-2/3 m-auto bg-move text-white text-center"><i>Search</i></button>   
-          </form>
+                <input type="text" placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
+                <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                </select>
+                <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                </select>
+                <input type="text" placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
+            </div>
+            <button class="mt-12 w-full bg-move text-white text-center py-3 rounded-lg"><i>Search</i></button>
+        </form>
           <div class="lg:w-[800px] m-auto lg:pl-[100px] mt-7 ">
             <div class="lg:flex space-x-4 space-y-4 m-auto">
               <div class="bg-white py-2 rounded-lg flex lg:w-[320px]">
