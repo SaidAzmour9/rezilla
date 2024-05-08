@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        .slider {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        /* Buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            color: #000;
+            font-size: 14px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        @layer utilities {
+        .hederImg {
+            background-image: url("images/Rectangle 4.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        }
+        @layer base {
+        html {
+          font-family: "Poppins", sans-serif;
+        }
+    }
+    </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            move: '#3A0CA3',
+            dblack: '#0B090A',
+            dgray: '#2B2B2B',
+            gray: '#D4D4D4',
+            white: '#FFFFFF',
+          }
+        },
+        fontFamily: {
+        'sans': ['Poppins', 'sans-serif']
+      }
+      }
+    }
+  </script>
+  <title>Rezilla</title>
+</head>
+<body class="">
+    <header class="hederImg">
+        <div class="hidden md:flex justify-between px-[100px] bg-move text-white py-4">
+          <div>
+            <span>Rezilla, 18 Grattan St, Brooklyn</span>
+          </div>
+          <div class="flex">
+            <div>
+              <span>Rezilla, 18 Grattan St, Brooklyn</span>
+            </div>
+            <div>
+              <span>Rezilla, 18 Grattan St, Brooklyn</span>
+            </div>
+          </div>
+        </div>
+        <nav class="flex text-dgray justify-between px-[30px] lg:px-[100px] py-[22px]">
+          <ul class="hidden lg:flex justify-between space-x-4">
+            <li><a href="#"></a>Home</li>
+            <li><a href="#"></a>About</li>
+            <li><a href="#"></a>Listings</li>
+            <li><a href="#"></a>Services</li>
+
+          </ul>
+          <div>
+            <a href="#"><i>Rezilla</i></a>
+          </div>
+          <div class="hidden lg:flex justify-between">
+            <div>
+              <a href="#"><i></i><span>Login/Register</span></a>
+            </div>
+            <div>
+              <a href="#"><i></i>Add listing</a>
+            </div>
+          </div>
+          <div class="lg:hidden">ddd</div>
+        </nav>
+        <!--  -->
+        <div class="lg:grid lg:grid-cols-2 px-[141px] mt-[89px] pb-[53px]">
+          <div class="">
+            <span>REAL ESTATE</span>
+            <h1>Find a perfect home <br> you love..!</h1>
+            <p>Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.</p>
+            <span></span>
+            <div class="slider relative">
+              <div class="slides flex">
+                  <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png" alt="Slide 1"></div>
+                  <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png"" alt="Slide 2"></div>
+                  <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png" alt="Slide 3"></div>
+              </div>
+              <div class="prev" onclick="prevSlide()">&#10094;</div>
+              <div class="next" onclick="nextSlide()">&#10095;</div>
+          </div>
+            
+          </div>
+          <form class="bg-white rounded-lg py-[24px] px-4">
+            <div class="flex justify-between text-[16px]  pt-4 pb-2">
+              <p>For Sale</p>
+              <p>For Rent</p>
+            </div>
+            <hr class="bg-gray">
+            <div class="flex flex-col">
+              <input type="text" placeholder="New York, San Francisco, etc" class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px]">
+              <select class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray border-none">
+                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
+                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
+                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
+              </select>
+              <select class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray border-none">
+                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
+                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
+                <option class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px] text-gray">Select Property Type</option>
+              </select>
+              <input type="text" placeholder="New York, San Francisco, etc" class="bg-[#D4D4D433] px-4 py-2 rounded-lg mt-[30px]">
+            </div>     
+      </form>
+          <div class="w-[800px] m-auto pl-[100px] mt-7  ">
+            <div class="flex space-x-4 m-auto">
+              <div class="bg-white py-2 rounded-lg flex w-[320px]">
+                <img src="images/Group20.png" alt="">
+                <p>72k+ Happy <br> Customers</p>
+              </div>
+              <div class="bg-white py-2 rounded-lg flex w-[320px]">
+                <img src="images/Group20.png" alt="">
+                <p>200+ New <br>Listings Everyday!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
