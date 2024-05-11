@@ -62,11 +62,24 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+}
+.hederMImg {
+    background-image: url("images/Rectangle 4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-height: 850px;
 }
 }
 @layer base {
 html {
     font-family: "Poppins", sans-serif;
+}
+
+form input{
+    outline: 0;
+    border: none;
 }
 }
 
@@ -92,6 +105,9 @@ html {
 .anSlid{
     animation: 25s slid infinite linear;
     display: inline-block;
+}
+.across img{
+    height: 320px;
 }
 
 
