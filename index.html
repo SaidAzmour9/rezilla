@@ -111,24 +111,27 @@
             <!-- ./slider -->
           </div>
           <!-- start form code -->
-          <form class="hidden lg:block bg-white rounded-[20px] py-12 px-4 mx-6 mt-24">
+          <form class="hidden lg:block bg-white rounded-[20px] py-12 px-4 mx-6 mt-24" id="propertyForm">
             <div class="flex justify-between text-center text-lg pt-4 pb-2">
                 <button class="text-move font-bold ml-2 lg:ml-12 pb-2 underline hover:underline-offset-8" id="salebtn">For Sale</button>
                 <button class="font-bold mr-2 lg:mr-12 pb-2" id="rentbtn">For Rent</button>
             </div>
             <hr class="bg-gray">
             <div class="flex flex-col" id="saleForm">
-                <input type="text" placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
-                <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
-                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select for sale</option>
-                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                <input type="text" id="location" required placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
+                <span class="error-message" id="locationError"></span><br>
+                <select id="propertyType" required class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
+                    <option desabled selected class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type1</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type2</option>
                 </select>
-                <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
-                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                <span class="error-message" id="propertyTypeError"></span><br>
+                <select id="roomType" required class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
+                    <option desabled selected class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select rooms</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select room 1</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select room 2</option>
                 </select>
+                <span class="error-message" id="roomsTypeError"></span><br>
                 <input type="text" placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
             </div>
             <div class="hidden flex flex-col" id="rentForm">
@@ -145,7 +148,8 @@
               </select>
               <input type="text" placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
             </div>
-            <button class="mt-12 w-full bg-move text-white text-center py-3 rounded-lg"><i>Search</i></button>
+            <button type="submit" class="mt-12 w-full bg-move text-white text-center py-3 rounded-lg" id="salesearch">Search</button>
+            <button type="submit" class="hidden mt-12 w-full bg-move text-white text-center py-3 rounded-lg" id="rentsearch">Search</button>
           </form>
           <!-- end form code -->
         </div>
@@ -225,6 +229,8 @@
         <p>200+ New <br>Listings Everyday!</p>
       </div>
     </div>
+
+
     <section class="lg:px-[140px] px-[40px] mt-[68px] lg:grid lg:grid-cols-2">
       <div>
         <div class="pr-10">
@@ -273,6 +279,121 @@
         </div>
       </div>
     </section>
+
+    <section class="lg:pl-[140px] px-[40px] py-[180px]">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <h2 class=" text-[19px] leading-[29px] font-medium text-move">CHECKOUT OUR NEW</h2>
+          <p class=" text-[36px] leading-[45px] font-bold mb-[30px]">Latest Listed Properties</p>
+          <p class="text-gray">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+        </div>
+        <div class="flex justify-around mt-[50px] lg:mt-0">
+          <button class="text-move border-2 border-move rounded-full px-4 py-1">All</button>
+          <button class="text-white border-2 border-move bg-move rounded-full px-4 lg:mx-2 py-1">sell</button>
+          <button class="text-move border-2 border-move rounded-full px-4 py-1">rent</button>
+        </div>
+      </div>
+      <div class="mt-[50px] space-y-8 lg:space-y-0 lg:flex gap-[50px] overflow-auto allt">
+        <div class="lg:min-w-[340px]">
+          <div class="relative">
+            <img src="images/tranquil.png" alt="">
+            <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
+              <img src="images/icons/🦆 icon _fire_.png" alt="">
+              <span class="text-[#FF1111] font-medium">Popular</span>
+            </div>
+          </div>
+          <div class="mt-[20px]">
+            <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
+            <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
+            <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
+          </div>
+          <div class="flex items-center space-x-5 mt-4">
+            <div class="flex items-center space-x-2">
+              <img src="images/icons/bed.png" alt="">
+              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
+            </div>
+            <div class="flex items-center space-x-2">
+              <img src="images/icons/bath.png" alt="">
+              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
+            </div>
+          </div>
+        </div>
+        <div class="lg:min-w-[340px]">
+          <div class="relative">
+            <img src="images/tranquil.png" alt="">
+            <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
+              <img src="images/icons/🦆 icon _fire_.png" alt="">
+              <span class="text-[#FF1111] font-medium">Popular</span>
+            </div>
+          </div>
+          <div class="mt-[20px]">
+            <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
+            <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
+            <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
+          </div>
+          <div class="flex items-center space-x-5 mt-4">
+            <div class="flex items-center space-x-2">
+              <img src="images/icons/bed.png" alt="">
+              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
+            </div>
+            <div class="flex items-center space-x-2">
+              <img src="images/icons/bath.png" alt="">
+              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
+            </div>
+          </div>
+        </div>
+        <div class="lg:min-w-[340px]">
+          <div class="relative">
+            <img src="images/tranquil.png" alt="">
+            <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
+              <img src="images/icons/🦆 icon _fire_.png" alt="">
+              <span class="text-[#FF1111] font-medium">Popular</span>
+            </div>
+          </div>
+          <div class="mt-[20px]">
+            <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
+            <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
+            <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
+          </div>
+          <div class="flex items-center space-x-5 mt-4">
+            <div class="flex items-center space-x-2">
+              <img src="images/icons/bed.png" alt="">
+              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
+            </div>
+            <div class="flex items-center space-x-2">
+              <img src="images/icons/bath.png" alt="">
+              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
+            </div>
+          </div>
+        </div>
+        <div class="lg:min-w-[340px]">
+          <div class="relative">
+            <img src="images/tranquil.png" alt="">
+            <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
+              <img src="images/icons/🦆 icon _fire_.png" alt="">
+              <span class="text-[#FF1111] font-medium">Popular</span>
+            </div>
+          </div>
+          <div class="mt-[20px]">
+            <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
+            <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
+            <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
+          </div>
+          <div class="flex items-center space-x-5 mt-4">
+            <div class="flex items-center space-x-2">
+              <img src="images/icons/bed.png" alt="">
+              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
+            </div>
+            <div class="flex items-center space-x-2">
+              <img src="images/icons/bath.png" alt="">
+              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- start services section -->
     <div class="bg-[#D4D4D4] py-[80px]">
       <section class="lg:px-[140px] px-[40px] text-center">
@@ -297,6 +418,7 @@
         </div>
     </section>
     </div>
+
     <!-- end services section -->
     <section class="lg:px-[140px] px-[40px] py-[180px]">
       <div>
@@ -417,6 +539,100 @@
       </div>
     </section>
 
+    <section class="lg:px-[140px] px-[40px] py-[120px]">
+      <div class="flex">
+        <div class="lg:w-[415px] pt-10">
+          <div>
+            <h3 class="text-[#4361EE] text-[19px] font-medium leading-[29px] ">TESTIMONIALS</h3>
+            <p class="text-[#2B2B2B] text-[39px] font-bold leading-[47px] my-[30px]">Look What Our Customers Say!</p>
+            <span class="text-[#2B2B2B] leading-[26px] text-4">Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque. </span>
+          </div>
+          <div class="mt-[61px] space-x-[50px]">
+            <a href="#"><i class="ri-arrow-left-line text-move w-[50px] ri-2x h-[50px] rounded-full p-2 border-[1px] border-move"></i></a>
+            <a href="#"><i class="ri-arrow-right-line text-move w-[50px] ri-2x h-[50px] rounded-full p-2 border-[1px] border-move"></i></a>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <img src="images/avis.png" alt="">
+          <img src="images/scroll.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="lg:px-[140px] px-[40px] my-[120px]">
+      <div class="bg-[#3A0CA3] text-white lg:flex lg:flex-row-reverse lg:pr-[188px] items-center rounded-[40px] lg:h-[260px]">
+        
+        <div class="lg:flex items-center lg:space-x-[17px] py-[80px] pl-[30px]">  
+          <div class="lg:w-[384px]">
+            <h2 class="text-[27px] leading-[41px] lg:text-[39px] lg:leading-[46px] font-bold">Become a Agent.</h2>
+            <p class="text-[13px] leading-[22px] lg:text-[16px] lg:leading-[26px] font-normal my-[30px]">Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque. </p>
+          </div>
+          <button class="px-[30px] bg-white py-[19px] lg:py-0 text-move rounded-full lg:w-[165px] lg:h-[49px]">Register Now</button>
+        </div>
+        <div class="pt-[40px] lg:pt-0 lg:w-[358px]">
+          <img src="images/unsplash_7uoMmzPd2JA.png" alt="" class="lg:h-[303px] mt-[-44px]">
+        </div>
+
+
+      </div>
+    </section>
+    <footer class="bg-[#4361EE]/10 text-center md:text-left py-[100px] lg:px-[140px] px-[40px] lg:flex gap-[100px]">
+      <div >
+        <div>
+          <a href="#" class="font-semibold text-[20px]"><i class="ri-home-8-line mr-2 text-white bg-move rounded-full p-1 "></i>Rezilla</a>
+        </div>
+        
+        <p class="mt-[32px] mb-[48px]">2728 Hickory StreetSalt <br> Lake City, UT 84104</p>
+        <span class="mb-[30px]"><i class="ri-phone-line"></i> +1 206-214-2298 </span><br>
+        <span><i class="ri-mail-line"></i>  support@rezilla.com</span>
+      </div>
+
+      <div class=" hidden md:flex lg:gap-[80px]">
+        <ul class="leading-[22px]">
+          <h4 class=" text-[19px] font-medium leading-normal mb-[20px]">Quick links</h4>
+          <ul class="space-y-[10px]">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Listings</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Become a Agent</a></li>
+          </ul>
+        </ul>
+  
+        <ul class="leading-[22px]">
+          <h4 class=" text-[19px] font-medium leading-normal mb-[20px]">Discovery</h4>
+          <ul class="space-y-[10px]">
+            <li><a href="#">Canada</a></li>
+            <li><a href="#">United States</a></li>
+            <li><a href="#">Germany</a></li>
+            <li><a href="#">Africa</a></li>
+            <li><a href="#">India</a></li>
+          </ul>
+        </ul>
+      </div>
+      <div class="mt-5 md:mt-0">
+        <p class="text-[#0B090A] mb-[21px] font-medium text-[19px] leading-[29px] lg:w-[200px]">Subscribe to our Newsletter!</p>
+        <div class="bg-white  pl-5 rounded-full flex pr-4 py-[15px]">
+          <input type="text" placeholder="Email address" class="outline-none border-none">
+          <a href="#"><i class="ri-arrow-right-line bg-[#3A0CA3] py-[14px] px-[15px] rounded-full text-white" aria-hidden="true"></i></a>
+        </div>
+        <p class="text-[#0B090A] mt-[30px] font-medium text-[19px] leading-[29px]">follow us on</p>
+        <div>
+          <i class="ri-linkedin-fill text-move ri-2x"></i>
+          <i class="ri-facebook-fill text-move ri-2x"></i>
+          <i class="ri-instagram-line text-move ri-2x"></i>
+        </div>
+      </div>
+    </footer>
+    <section class="bg-[#0B090A] text-[#AAAAAA] text-[13px] leading-[22px] py-[15px] flex justify-center gap-[440px]">
+      <p>&copy;  Rezilla - All rights reserved</p>
+      <div class="hidden md:flex gap-[40px]">
+        <p>Terms and Conditions</p>
+        <p>Privacy Policy</p>
+        <p>Disclaimer</p>
+      </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

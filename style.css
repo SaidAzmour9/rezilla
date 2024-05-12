@@ -110,6 +110,9 @@ form input{
     height: 320px;
 }
 
+.allt::-webkit-scrollbar{
+        width: 0;
+}
 
 
 @media (min-width: 1024px) {
