@@ -2,12 +2,14 @@ let mobileBtn = document.querySelector("#burger-icon");
 let mobileMenu = document.querySelector("#mobile-menu");
 let menuAs = document.querySelectorAll("#mobile-menu ul li a");
 
+
 let saleBtn = document.querySelector("#salebtn");
 let rentBtn = document.querySelector("#rentbtn");
 let saleForm = document.querySelector("#saleForm");
 let rentForm = document.querySelector("#rentForm");
 let saleSearch = document.querySelector('#salesearch');
 let rentSearch = document.querySelector('#rentsearch');
+
 
 let saleMBtn = document.querySelector("#saleMbtn");
 let rentMBtn = document.querySelector("#rentMbtn");
@@ -91,6 +93,9 @@ function goToSlide(index) {
     slideIndex = index;
     showSlides();
 }
+
+
+
 mobileBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
     menuAs.forEach(a => {
