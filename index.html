@@ -19,6 +19,9 @@
             dgray: '#2B2B2B',
             gray: '#D4D4D4',
             white: '#FFFFFF',
+          },
+          boxShadow: {
+              shForm: "10px 30px 50px 0px rgba(0, 0, 0, 0.5)",
           }
         },
         fontFamily: {
@@ -30,29 +33,32 @@
   <title>Rezilla</title>
 </head>
 <body>
-    <header class="hederImg pb-[300px] lg:pb-[10px]">
-     <!-- start contact info -->
+  <section class="relative hederMImg">
+    <div class="absolute w-full">
+    </div>
+    <header class="pb-[300px] lg:pb-[10px]">
+      <!-- start contact info -->
         <div class="hidden md:flex justify-between px-[30px] lg:px-[100px] bg-move text-white py-4">
           <div>
-            <span>Rezilla, 18 Grattan St, Brooklyn</span>
+            <span><i class="ri-map-pin-line"></i>Rezilla, 18 Grattan St, Brooklyn</span>
           </div>
-          <div class="flex">
+          <div class="flex gap-4">
             <div>
-              <span>Rezilla, 18 Grattan St, Brooklyn</span>
+              <span><i class="ri-phone-line"></i>+1 206-214-2298</span>
             </div>
             <div>
-              <span>Rezilla, 18 Grattan St, Brooklyn</span>
+              <span><i class="ri-mail-line"></i> support@rezilla.com</span>
             </div>
           </div>
         </div>
-    <!-- end contact info -->
-    <!-- start desktop nav -->
+      <!-- end contact info -->
+      <!-- start desktop nav -->
         <nav class="flex text-dgray justify-between px-[30px] lg:px-[100px] py-[22px] ">
           <ul class="hidden lg:flex justify-between space-x-4">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Listings</a></li>
-            <li><a href="#">Services</a></li>
+            <li class="hover:bg-gray rounded-full px-2"><a href="#">Home</a></li>
+            <li class="hover:bg-gray rounded-full px-2"><a href="#">About</a></li>
+            <li class="hover:bg-gray rounded-full px-2"><a href="#">Listings</a></li>
+            <li class="hover:bg-gray rounded-full px-2"><a href="#">Services</a></li>
 
           </ul>
           <div>
@@ -68,8 +74,8 @@
           </div>
           <div class="lg:hidden"><i class="ri-menu-line text-[25px] cursor-pointer" id="burger-icon"></i></div>
         </nav>
-    <!-- end desktop nav -->
-    <!-- starting mobile nav -->
+      <!-- end desktop nav -->
+      <!-- starting mobile nav -->
         <div class="hidden flex flex-col space-y-6 text-center m-auto" id="mobile-menu">
           <ul class=" flex flex-col space-y-6 text-center m-auto">
             <li><a href="#">Home</a></li>
@@ -79,9 +85,6 @@
 
           </ul>
           <div class="">
-            <a href="#" class="font-semibold text-[20px]"><i class="ri-home-8-line mx-2 text-white bg-move rounded-full p-1 "></i>Rezilla</a>
-          </div>
-          <div class="">
             <div class="">
               <a href="#"><i><i class="ri-user-line"></i></i><span>Login/Register</span></a>
             </div>
@@ -90,8 +93,8 @@
             </div>
           </div>
         </div>
-    <!-- hero section starting -->
-        <div class="lg:grid lg:grid-cols-2 px-[30px] lg:px-[131px] mt-[49px] lg:mt-[89px] pb-[53px]">
+      <!-- hero section starting -->
+        <div class="lg:grid lg:grid-cols-2 px-[10px] lg:px-[131px] mt-[49px] lg:mt-[89px] pb-[53px]">
           <div>
             <span class="text-move text-[19px] mb-[30px]">REAL ESTATE</span>
             <h1 class=" text-dblack font-bold text-[39px]  lg:text-[55px] my-4">Find a perfect home you love..!</h1>
@@ -101,17 +104,18 @@
             <div class="slider relative">
               <div class="slides flex">
                   <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png" alt="Slide 1"></div>
-                  <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png"" alt="Slide 2"></div>
+                  <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png" alt="Slide 2"></div>
                   <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png" alt="Slide 3"></div>
               </div>
               <div class="prev" onclick="prevSlide()">&#10094;</div>
               <div class="next" onclick="nextSlide()">&#10095;</div>
               <div class="pagination"></div>
             </div>
+            <span class=" absolute circole top-[390px] left-[280px] lg:left-[480px] lg:top-[490px] "></span>
             <!-- ./slider -->
           </div>
           <!-- start form code -->
-          <form class="hidden lg:block bg-white rounded-[20px] py-12 px-4 mx-6 mt-24" id="propertyForm">
+          <form class="bg-white shForm rounded-[20px] py-12 px-4 mx-6 mt-24" id="propertyForm">
             <div class="flex justify-between text-center text-lg pt-4 pb-2">
                 <button class="text-move font-bold ml-2 lg:ml-12 pb-2 underline hover:underline-offset-8" id="salebtn">For Sale</button>
                 <button class="font-bold mr-2 lg:mr-12 pb-2" id="rentbtn">For Rent</button>
@@ -132,7 +136,10 @@
                     <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select room 2</option>
                 </select>
                 <span class="error-message" id="roomsTypeError"></span><br>
-                <input type="text" placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
+                <div class="pl-2 flex gap-4 pt-6">
+                  <img src="images/icons/adsearch.png" alt="">
+                  <p class="text-move">Advanced search</p>
+                </div>
             </div>
             <div class="hidden flex flex-col" id="rentForm">
               <input type="text" placeholder="New York,222 San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
@@ -146,7 +153,10 @@
                   <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
                   <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
               </select>
-              <input type="text" placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
+              <div class="pl-2 flex gap-4 pt-6">
+                <img src="images/icons/adsearch.png" alt="">
+                <p class="text-move">Advanced search</p>
+              </div>
             </div>
             <button type="submit" class="mt-12 w-full bg-move text-white text-center py-3 rounded-lg" id="salesearch">Search</button>
             <button type="submit" class="hidden mt-12 w-full bg-move text-white text-center py-3 rounded-lg" id="rentsearch">Search</button>
@@ -154,44 +164,7 @@
           <!-- end form code -->
         </div>
     </header>
-    <!-- moblie form -->
-    <form  class="lg:hidden bg-white rounded-[20px] p-4 mx-6 mt-[-300px]">
-      <div class="flex justify-between text-center text-lg pt-4 pb-2">
-        <p class="text-move font-bold ml-2 lg:ml-12 pb-2 underline hover:underline-offset-8" id="saleMbtn">For Sale</p>
-        <p class="font-bold mr-2 lg:mr-12 pb-2" id="rentMbtn">For Rent</p>
-      </div>
-      <hr class="bg-gray">
-      <div class="flex flex-col" id="saleMForm">
-          <input type="text" placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
-          <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
-              <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select for sale</option>
-              <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-              <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-          </select>
-          <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
-              <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-              <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-              <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-          </select>
-          <input type="text" placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
-      </div>
-      <div class="hidden flex flex-col" id="rentMForm">
-        <input type="text" placeholder="New York,222 San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
-        <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
-            <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select for rent</option>
-            <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-            <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-        </select>
-        <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
-            <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-            <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-            <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-        </select>
-        <input type="text" placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
-      </div>
-      <button class="mt-12 w-full bg-move text-white text-center py-3 rounded-lg"><i>Search</i></button>
-    </form>
-    <!-- end moblie form -->
+  </section>
 
     <div class="lg:w-[800px] m-auto lg:pl-[100px] mt-[-40px] ">
       <div class="hidden lg:flex flex-col lg:flex-row  lg:space-x-4 space-y-0 space-x-0 lg:space-y-4 m-auto w-full justify-center">
