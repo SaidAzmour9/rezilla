@@ -1,21 +1,12 @@
 let mobileBtn = document.querySelector("#burger-icon");
 let mobileMenu = document.querySelector("#mobile-menu");
 let menuAs = document.querySelectorAll("#mobile-menu ul li a");
-
-
 let saleBtn = document.querySelector("#salebtn");
 let rentBtn = document.querySelector("#rentbtn");
 let saleForm = document.querySelector("#saleForm");
 let rentForm = document.querySelector("#rentForm");
 let saleSearch = document.querySelector('#salesearch');
 let rentSearch = document.querySelector('#rentsearch');
-
-
-let saleMBtn = document.querySelector("#saleMbtn");
-let rentMBtn = document.querySelector("#rentMbtn");
-let saleMForm = document.querySelector("#saleMForm");
-let rentMForm = document.querySelector("#rentMForm");
-
 
 
 document.getElementById("propertyForm").addEventListener("submit", function(event) {
@@ -41,6 +32,7 @@ document.getElementById("propertyForm").addEventListener("submit", function(even
         event.preventDefault();
     }
 })
+
 let slideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const pagination = document.querySelector('.pagination');
@@ -49,18 +41,14 @@ function showSlides() {
     slides.forEach((slide) => {
         slide.style.display = 'none';
     });
-
     slideIndex++;
-
     if (slideIndex > slides.length) {
         slideIndex = 1;
     }
-
     slides[slideIndex - 1].style.display = 'block';
-    updatePagination();
-    
+    updatePagination(); 
 }
-
+ 
 function nextSlide() {
     slideIndex++;
     if (slideIndex > slides.length) {
@@ -130,28 +118,7 @@ saleBtn.addEventListener('click', ()=> {
     saleForm.classList.remove('hidden');
 })
 
-rentMBtn.addEventListener('click', ()=> {
-    saleMForm.classList.add('hidden');
-    rentMForm.classList.remove('hidden');
-    saleMBtn.classList.remove('hover:underline-offset-8');
-    saleMBtn.classList.remove('underline');
-    saleMBtn.classList.remove('text-move');
-    rentSearch.classList.add('hidden');
-    saleSearch.classList.remove('hidden');
-    rentMBtn.classList.add('text-move');
-    rentMBtn.classList.add('hover:underline-offset-8');
-    rentMBtn.classList.add('underline');
-})
-saleMBtn.addEventListener('click', ()=> {
-    saleMBtn.classList.add('hover:underline-offset-8');
-    saleMBtn.classList.add('underline');
-    rentMBtn.classList.remove('hover:underline-offset-8');
-    saleMBtn.classList.add('text-move');
-    rentMBtn.classList.remove('text-move');
-    rentMBtn.classList.remove('underline');
-    rentMForm.classList.add('hidden');
-    saleMForm.classList.remove('hidden');
-})
+
 
 
 
