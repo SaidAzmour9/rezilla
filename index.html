@@ -73,16 +73,19 @@
                 <a href="#" class="text-white bg-move rounded-full p-3"><i class="ri-home-8-line text-white bg-move rounded-full p-1 "></i>Add listing</a>
               </div>
             </div>
-            <div class="lg:hidden"><i class="ri-menu-line text-[25px] cursor-pointer" id="burger-icon"></i></div>
+            <div class="absolute right-6 md:hidden">
+              <button id="burger-icon"><i class="ri-menu-line text-[25px] cursor-pointer"></i></button>
+            </div>
+            
           </nav>
         <!-- end desktop nav -->
         <!-- starting mobile nav -->
-          <div class="hidden flex flex-col space-y-6 text-center m-auto" id="mobile-menu">
+          <div class="absolute hidden left-[10%] bg-white shadow-shForm border-move border-x-2 border-b-2 rounded-lg w-[80%] px-4 pb-6 flex flex-col space-y-6 text-center m-auto" id="mobile-menu">
             <ul class=" flex flex-col space-y-6 text-center m-auto">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Listings</a></li>
-              <li><a href="#">Services</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#listings">Listings</a></li>
+              <li><a href="#services">Services</a></li>
 
             </ul>
             <div class="">
@@ -95,7 +98,7 @@
             </div>
           </div>
         <!-- hero section starting -->
-          <div class="lg:grid lg:grid-cols-2 px-[10px] lg:px-[131px] mt-[49px] lg:mt-[89px] pb-[53px]">
+          <div class="lg:grid lg:grid-cols-2 px-[10px] lg:px-[131px] mt-[49px] lg:mt-[89px] pb-[53px]" id="home">
             <div class="text-center lg:text-left">
               <span class="text-move text-[19px] mb-[30px]">REAL ESTATE</span>
               <h1 class=" text-dblack font-bold text-[39px]  lg:text-[55px] my-4">Find a perfect home you love..!</h1>
@@ -204,7 +207,7 @@
           <p>200+ New <br>Listings Everyday!</p>
         </div>
       </div>
-      <section class="section lg:px-[140px] px-[40px] mt-[68px] lg:grid lg:grid-cols-2">
+      <section class="section lg:px-[140px] px-[40px] mt-[68px] lg:grid lg:grid-cols-2" id="about">
         <div>
           <div class="pr-10">
             <span class="text-move text-[19px] mb-[30px]">WHO ARE WE</span>
@@ -365,7 +368,7 @@
         </div>
       </section>
       <!-- start services section -->
-      <div class="bg-[#D4D4D4] py-[80px]">
+      <div class="bg-[#D4D4D4] py-[80px]" id="serices">
         <section class="section lg:px-[140px] px-[40px] text-center">
           <h3 class="text-[#2B2B2B] text-[19px] leading-[29px] font-normal ">OUR SERVICES</h3>
           <p class="text-[#0B090A] mt-[40px] mb-[70px] text-[39px] leading-[47px] font-semibold">Donec porttitor euismod dignissim</p>
@@ -509,7 +512,7 @@
         </div>
       </section>
 
-      <section class="section lg:px-[140px] px-[40px] py-[120px]">
+      <section class="section lg:px-[140px] px-[40px] py-[120px]" id="listing">
         <div class="flex  flex-col md:flex-row ">
           <div class="lg:w-[415px] pt-10">
             <div>

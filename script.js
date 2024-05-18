@@ -103,12 +103,10 @@ function goToSlide(index) {
     showSlides();
 }
 
-
-
 mobileBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
-    menuAs.forEach(a => {
-        a.addEventListener('focus', () => {
+    menuAs.forEach(li => {
+        li.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             
         })
