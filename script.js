@@ -33,6 +33,27 @@ document.getElementById("propertyForm").addEventListener("submit", function(even
     }
 })
 
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".section");
+    const observerOptions = {
+        root: null,
+        threshold: 0.1,
+    };
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate__animated", "animate__fadeInUp");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+
+
 let slideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const pagination = document.querySelector('.pagination');

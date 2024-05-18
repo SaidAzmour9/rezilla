@@ -11,9 +11,18 @@
 
 .slide {
     min-width: 100%;
-    min-height: 340px;
+
 }
 
+
+.section {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.section.animate__animated {
+    opacity: 1;
+}
 
 .prev,
 .next {
