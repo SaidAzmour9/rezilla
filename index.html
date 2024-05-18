@@ -1,173 +1,199 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            move: '#3A0CA3',
-            dblack: '#0B090A',
-            dgray: '#2B2B2B',
-            gray: '#D4D4D4',
-            white: '#FFF',
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              move: '#3A0CA3',
+              dblack: '#0B090A',
+              dgray: '#2B2B2B',
+              gray: '#D4D4D4',
+              white: '#FFF',
+            },
+            boxShadow: {
+              shForm: '4px 10px 30px 0px rgba(0, 0, 0, 0.1)',
           },
-          boxShadow: {
-              shForm: "10px 30px 50px 0px rgba(0, 0, 0, 0.5)",
-          }
-        },
-        fontFamily: {
-        'sans': ['Poppins', 'sans-serif']
-      }
+          fontFamily: {
+          'sans': ['Poppins', 'sans-serif']
+        }
+        }
       }
     }
-  </script>
-  <title>Rezilla</title>
-</head>
-<body>
-  <section class="relative">
-    <div class="absolute w-full hederMImg h-[1000px]">
-    </div>
-    <header class="lg:pb-[10px]">
-      <!-- start contact info -->
-        <div class="hidden md:flex justify-between px-[30px] lg:px-[100px] bg-move text-white py-4">
-          <div>
-            <span><i class="ri-map-pin-line"></i>Rezilla, 18 Grattan St, Brooklyn</span>
-          </div>
-          <div class="flex gap-4">
+    </script>
+    <title>Rezilla</title>
+  </head>
+  <body>
+    <section class="relative">
+      <div class="absolute w-full hederMImg h-[1000px]">
+      </div>
+      <header class="lg:pb-[10px]">
+        <!-- start contact info -->
+          <div class="hidden md:flex justify-between px-[30px] lg:px-[100px] bg-move text-white py-4">
             <div>
-              <span><i class="ri-phone-line"></i>+1 206-214-2298</span>
+              <span><i class="ri-map-pin-line"></i>Rezilla, 18 Grattan St, Brooklyn</span>
             </div>
-            <div>
-              <span><i class="ri-mail-line"></i> support@rezilla.com</span>
-            </div>
-          </div>
-        </div>
-      <!-- end contact info -->
-      <!-- start desktop nav -->
-        <nav class="flex text-dgray justify-between px-[30px] lg:px-[100px] py-[22px] ">
-          <ul class="hidden lg:flex justify-between space-x-4">
-            <li class="hover:bg-gray rounded-full px-2"><a href="#">Home</a></li>
-            <li class="hover:bg-gray rounded-full px-2"><a href="#">About</a></li>
-            <li class="hover:bg-gray rounded-full px-2"><a href="#">Listings</a></li>
-            <li class="hover:bg-gray rounded-full px-2"><a href="#">Services</a></li>
-
-          </ul>
-          <div>
-            <a href="#" class="font-semibold text-[20px]"><i class="ri-home-8-line mx-2 text-white bg-move rounded-full p-1 "></i>Rezilla</a>
-          </div>
-          <div class="hidden lg:flex justify-between">
-            <div class="mr-4">
-              <a href="#"><i><i class="ri-user-line"></i></i><span>Login/Register</span></a>
-            </div>
-            <div>
-              <a href="#" class="text-white bg-move rounded-full p-3"><i class="ri-home-8-line text-white bg-move rounded-full p-1 "></i>Add listing</a>
-            </div>
-          </div>
-          <div class="lg:hidden"><i class="ri-menu-line text-[25px] cursor-pointer" id="burger-icon"></i></div>
-        </nav>
-      <!-- end desktop nav -->
-      <!-- starting mobile nav -->
-        <div class="hidden flex flex-col space-y-6 text-center m-auto" id="mobile-menu">
-          <ul class=" flex flex-col space-y-6 text-center m-auto">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Listings</a></li>
-            <li><a href="#">Services</a></li>
-
-          </ul>
-          <div class="">
-            <div class="">
-              <a href="#"><i><i class="ri-user-line"></i></i><span>Login/Register</span></a>
-            </div>
-            <div class="mt-4">
-              <a href="#" class="text-white bg-move rounded-full p-3"><i class="ri-home-8-line text-white bg-move rounded-full p-1 "></i>Add listing</a>
-            </div>
-          </div>
-        </div>
-      <!-- hero section starting -->
-        <div class="lg:grid lg:grid-cols-2 px-[10px] lg:px-[131px] mt-[49px] lg:mt-[89px] pb-[53px]">
-          <div>
-            <span class="text-move text-[19px] mb-[30px]">REAL ESTATE</span>
-            <h1 class=" text-dblack font-bold text-[39px]  lg:text-[55px] my-4">Find a perfect home you love..!</h1>
-            <p class="text-[#808080]">Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.</p>
-            <span></span>
-            <!-- slider -->
-            <div class="slider relative">
-              <div class="slides flex">
-                  <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png" alt="Slide 1"></div>
-                  <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png" alt="Slide 2"></div>
-                  <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png" alt="Slide 3"></div>
+            <div class="flex gap-4">
+              <div>
+                <span><i class="ri-phone-line"></i>+1 206-214-2298</span>
               </div>
-              <div class="prev" onclick="prevSlide()">&#10094;</div>
-              <div class="next" onclick="nextSlide()">&#10095;</div>
-              <div class="pagination"></div>
+              <div>
+                <span><i class="ri-mail-line"></i> support@rezilla.com</span>
+              </div>
             </div>
-            <span class=" absolute circole top-[390px] left-[280px] lg:left-[480px] lg:top-[490px] "></span>
-            <!-- ./slider -->
           </div>
-          <!-- start form code -->
-          <form class="relative bg-white rounded-[20px] py-12 px-4 mx-6 mt-24" id="propertyForm">
-            <div class="flex justify-between text-center text-lg pt-4 pb-2">
-                <button class="text-move font-bold ml-2 lg:ml-12 pb-2 underline hover:underline-offset-8" id="salebtn">For Sale</button>
-                <button class="font-bold mr-2 lg:mr-12 pb-2" id="rentbtn">For Rent</button>
+        <!-- end contact info -->
+        <!-- start desktop nav -->
+          <nav class="flex text-dgray justify-between px-[30px] lg:px-[100px] py-[22px] ">
+            <ul class="hidden lg:flex justify-between space-x-4">
+              <li class="hover:bg-gray rounded-full px-2"><a href="#">Home</a></li>
+              <li class="hover:bg-gray rounded-full px-2"><a href="#">About</a></li>
+              <li class="hover:bg-gray rounded-full px-2"><a href="#">Listings</a></li>
+              <li class="hover:bg-gray rounded-full px-2"><a href="#">Services</a></li>
+
+            </ul>
+            <div>
+              <a href="#" class="font-semibold text-[20px]"><i class="ri-home-8-line mx-2 text-white bg-move rounded-full p-1 "></i>Rezilla</a>
             </div>
-            <hr class="bg-gray">
-            <div class="flex flex-col" id="saleForm">
-                <input type="text" id="location" required placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
-                <span class="error-message" id="locationError"></span><br>
-                <select id="propertyType" required class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
-                    <option desabled selected class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type1</option>
-                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type2</option>
+            <div class="hidden lg:flex justify-between">
+              <div class="mr-4">
+                <a href="#"><i><i class="ri-user-line"></i></i><span>Login/Register</span></a>
+              </div>
+              <div>
+                <a href="#" class="text-white bg-move rounded-full p-3"><i class="ri-home-8-line text-white bg-move rounded-full p-1 "></i>Add listing</a>
+              </div>
+            </div>
+            <div class="lg:hidden"><i class="ri-menu-line text-[25px] cursor-pointer" id="burger-icon"></i></div>
+          </nav>
+        <!-- end desktop nav -->
+        <!-- starting mobile nav -->
+          <div class="hidden flex flex-col space-y-6 text-center m-auto" id="mobile-menu">
+            <ul class=" flex flex-col space-y-6 text-center m-auto">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Listings</a></li>
+              <li><a href="#">Services</a></li>
+
+            </ul>
+            <div class="">
+              <div class="">
+                <a href="#"><i><i class="ri-user-line"></i></i><span>Login/Register</span></a>
+              </div>
+              <div class="mt-4">
+                <a href="#" class="text-white bg-move rounded-full p-3"><i class="ri-home-8-line text-white bg-move rounded-full p-1 "></i>Add listing</a>
+              </div>
+            </div>
+          </div>
+        <!-- hero section starting -->
+          <div class="lg:grid lg:grid-cols-2 px-[10px] lg:px-[131px] mt-[49px] lg:mt-[89px] pb-[53px]">
+            <div>
+              <span class="text-move text-[19px] mb-[30px]">REAL ESTATE</span>
+              <h1 class=" text-dblack font-bold text-[39px]  lg:text-[55px] my-4">Find a perfect home you love..!</h1>
+              <p class="text-[#808080]">Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.</p>
+              <span></span>
+              <!-- slider -->
+              <div class="slider relative">
+                <div class="slides flex">
+                    <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png" alt="Slide 1"></div>
+                    <div class="slide"><img src="images/sandiego.png" alt="Slide 2"></div>
+                    <div class="slide"><img src="images/luxury-classic-modern-bedroom-suite-hotel 1.png" alt="Slide 3"></div>
+                </div>
+                <div class="prev" onclick="prevSlide()">&#10094;</div>
+                <div class="next" onclick="nextSlide()">&#10095;</div>
+                <div class="pagination"></div>
+              </div>
+              <span class=" absolute circole top-[390px] left-[280px] lg:left-[480px] lg:top-[490px] "></span>
+            </div>
+            <!-- ./slider -->
+
+            <!-- start form code -->
+            <form class="relative shadow-shForm bg-white rounded-[20px] py-12 px-4 mx-6 mt-24" id="propertyForm">
+              <div class="flex justify-between text-center text-lg pt-4 pb-2">
+                  <button class="text-move font-bold ml-2 lg:ml-12 pb-2 underline hover:underline-offset-8" id="salebtn">For Sale</button>
+                  <button class="font-bold mr-2 lg:mr-12 pb-2" id="rentbtn">For Rent</button>
+              </div>
+              <hr class="bg-gray">
+              <div class="flex flex-col" id="saleForm">
+                  <input type="text" id="location" required placeholder="New York, San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
+                  <span class="error-message" id="locationError"></span><br>
+                  <select id="propertyType" required class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
+                      <option desabled selected class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                      <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type1</option>
+                      <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type2</option>
+                  </select>
+                  <span class="error-message" id="propertyTypeError"></span><br>
+                  <select id="roomType" required class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
+                      <option desabled selected class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select rooms</option>
+                      <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select room 1</option>
+                      <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select room 2</option>
+                  </select>
+                  <span class="error-message" id="roomsTypeError"></span><br>
+                  <div class="pl-2 flex gap-4 pt-6">
+                    <img src="images/icons/adsearch.png" alt="">
+                    <p class="text-move">Advanced search</p>
+                  </div>
+              </div>
+              <div class="hidden flex flex-col" id="rentForm">
+                <input type="text" placeholder="New York,222 San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
+                <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select for rent</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
                 </select>
-                <span class="error-message" id="propertyTypeError"></span><br>
-                <select id="roomType" required class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
-                    <option desabled selected class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select rooms</option>
-                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select room 1</option>
-                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select room 2</option>
+                <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
+                    <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
                 </select>
-                <span class="error-message" id="roomsTypeError"></span><br>
                 <div class="pl-2 flex gap-4 pt-6">
                   <img src="images/icons/adsearch.png" alt="">
                   <p class="text-move">Advanced search</p>
                 </div>
-            </div>
-            <div class="hidden flex flex-col" id="rentForm">
-              <input type="text" placeholder="New York,222 San Francisco, etc" class="bg-gray-light px-4 py-3 rounded-lg mt-8 border-none">
-              <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
-                  <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select for rent</option>
-                  <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-                  <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-              </select>
-              <select class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray border-none">
-                  <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-                  <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-                  <option class="bg-gray-light px-4 py-3 rounded-lg mt-8 text-gray">Select Property Type</option>
-              </select>
-              <div class="pl-2 flex gap-4 pt-6">
-                <img src="images/icons/adsearch.png" alt="">
-                <p class="text-move">Advanced search</p>
               </div>
-            </div>
-            <button type="submit" class="mt-12 w-full bg-move text-white text-center py-3 rounded-lg" id="salesearch">Search</button>
-            <button type="submit" class="hidden mt-12 w-full bg-move text-white text-center py-3 rounded-lg" id="rentsearch">Search</button>
-          </form>
-          <!-- end form code -->
-        </div>
-    </header>
-  </section>
+              <button type="submit" class="mt-12 w-full bg-move text-white text-center py-3 rounded-lg" id="salesearch">Search</button>
+              <button type="submit" class="hidden mt-12 w-full bg-move text-white text-center py-3 rounded-lg" id="rentsearch">Search</button>
+            </form>
+            <!-- end form code -->
+          </div>
+      </header>
+    </section>
 
-    <div class="lg:w-[800px] m-auto lg:pl-[100px] mt-[-40px] ">
-      <div class="hidden lg:flex flex-col lg:flex-row  lg:space-x-4 space-y-0 space-x-0 lg:space-y-4 m-auto w-full justify-center">
+      <div class="lg:w-[800px] m-auto lg:pl-[100px] mt-[-40px] ">
+        <div class="hidden lg:flex flex-col lg:flex-row  lg:space-x-4 space-y-0 space-x-0 lg:space-y-4 m-auto w-full justify-center">
+          <div class="bg-white py-2 rounded-lg flex justify-center lg:mt-4 lg:w-[320px]">
+            <img src="images/Group20.png" alt="" class="h-[36px]">
+            <p>72k+ Happy <br> Customers</p>
+          </div>
+          <div class="bg-white py-2 rounded-lg flex justify-center lg:w-[320px]">
+            <img src="images/Ellipse3.png" alt="" class="h-[60px]">
+            <p>200+ New <br>Listings Everyday!</p>
+          </div>
+        </div>
+      </div>
+      <section class="relative px-[40px] lg:px-[140px] mt-[68px]">
+        <h2 class="text-[#808080] text-center my-[50px]">Trusted by 100+ Companies across the globe! </h2>
+        <span class="hidden lg:block absolute top-[-50px] circle left-[260px]"></span>
+        <div class=" overflow-hidden whitespace-nowrap mt-[60px]">
+          <div class="flex space-x-[90px] anSlid " id="logos">
+            <img src="images/amazon.png" alt="">
+            <img src="images/google.png" alt="">
+            <img src="images/spotify.png" alt="">
+            <img src="images/samsung.png" alt="">
+            <img src="images/logitech.png" alt="">
+          </div>
+        </div>
+      </section>
+
+      <div class="flex lg:hidden flex-col space-y-0 space-x-0 m-auto w-full justify-center my-[40px]">
         <div class="bg-white py-2 rounded-lg flex justify-center lg:mt-4 lg:w-[320px]">
           <img src="images/Group20.png" alt="" class="h-[36px]">
           <p>72k+ Happy <br> Customers</p>
@@ -177,49 +203,48 @@
           <p>200+ New <br>Listings Everyday!</p>
         </div>
       </div>
-    </div>
-    <section class="relative px-[40px] lg:px-[140px] mt-[68px]">
-      <h2 class="text-[#808080] text-center my-[50px]">Trusted by 100+ Companies across the globe! </h2>
-      <span class="hidden lg:block absolute top-[-50px] circle left-[260px]"></span>
-      <div class=" overflow-hidden whitespace-nowrap mt-[60px]">
-        <div class="flex space-x-[90px] anSlid " id="logos">
-          <img src="images/amazon.png" alt="">
-          <img src="images/google.png" alt="">
-          <img src="images/spotify.png" alt="">
-          <img src="images/samsung.png" alt="">
-          <img src="images/logitech.png" alt="">
+
+
+      <section class="lg:px-[140px] px-[40px] mt-[68px] lg:grid lg:grid-cols-2">
+        <div>
+          <div class="pr-10">
+            <span class="text-move text-[19px] mb-[30px]">WHO ARE WE</span>
+            <h2 class=" text-dblack font-bold text-[18px] lg:text-[39px] my-4">Assisting individuals in locating the appropriate real estate.</h2>
+            <p class="text-gray">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.</p>
+          </div>
+          <div class="my-4 hidden lg:block">
+            <div class="flex space-x-4 w-[80%] items-center mb-3 bg-white">
+              <img src="images/🦆 icon _smart home_.png" alt="">
+              <div>
+                <h3 class="text-[#4361EE] text-[19px] leading-[29px] mb-1">Donec porttitor euismod</h3>
+                <p class="text-gray font-light text-4">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+              </div>
+            </div>
+            <div class="flex space-x-4 w-[80%] items-center bg-white">
+              <img src="images/user.png" alt="">
+              <div>
+                <h3 class="text-[#4361EE] text-[19px] leading-[29px] mb-1">Donec porttitor euismod</h3>
+                <p class="text-gray font-light text-4">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <div class="flex lg:hidden flex-col space-y-0 space-x-0 m-auto w-full justify-center my-[40px]">
-      <div class="bg-white py-2 rounded-lg flex justify-center lg:mt-4 lg:w-[320px]">
-        <img src="images/Group20.png" alt="" class="h-[36px]">
-        <p>72k+ Happy <br> Customers</p>
-      </div>
-      <div class="bg-white py-2 rounded-lg flex justify-center lg:w-[320px]">
-        <img src="images/Ellipse3.png" alt="" class="h-[60px]">
-        <p>200+ New <br>Listings Everyday!</p>
-      </div>
-    </div>
-
-
-    <section class="lg:px-[140px] px-[40px] mt-[68px] lg:grid lg:grid-cols-2">
-      <div>
-        <div class="pr-10">
-          <span class="text-move text-[19px] mb-[30px]">WHO ARE WE</span>
-          <h2 class=" text-dblack font-bold text-[18px] lg:text-[39px] my-4">Assisting individuals in locating the appropriate real estate.</h2>
-          <p class="text-gray">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.</p>
+        <div class="grid grid-cols-2 my-6 lg:my-0">
+          <img src="images/swim.png" alt="" class="mt-4 h-[260px] lg:h-[500px]">
+          <div class="flex flex-col">
+            <img src="images/room.png" alt="" class="">
+            <img src="images/arc.png" alt="">
+          </div>
         </div>
-        <div class="my-4 hidden lg:block">
-          <div class="flex space-x-4 w-[80%] items-center mb-3 bg-white">
+        <div class="my-4 lg:hidden block">
+          <div class="flex space-x-4 lg:w-[80%] items-center mb-3 bg-white">
             <img src="images/🦆 icon _smart home_.png" alt="">
             <div>
               <h3 class="text-[#4361EE] text-[19px] leading-[29px] mb-1">Donec porttitor euismod</h3>
               <p class="text-gray font-light text-4">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
             </div>
           </div>
-          <div class="flex space-x-4 w-[80%] items-center bg-white">
+          <div class="flex space-x-4 lg:w-[80%] items-center bg-white">
             <img src="images/user.png" alt="">
             <div>
               <h3 class="text-[#4361EE] text-[19px] leading-[29px] mb-1">Donec porttitor euismod</h3>
@@ -227,386 +252,362 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="grid grid-cols-2 my-6 lg:my-0">
-        <img src="images/swim.png" alt="" class="mt-4 h-[260px] lg:h-[500px]">
-        <div class="flex flex-col">
-          <img src="images/room.png" alt="" class="">
-          <img src="images/arc.png" alt="">
-        </div>
-      </div>
-      <div class="my-4 lg:hidden block">
-        <div class="flex space-x-4 lg:w-[80%] items-center mb-3 bg-white">
-          <img src="images/🦆 icon _smart home_.png" alt="">
+      </section>
+
+      <section class="lg:pl-[140px] px-[40px] py-[180px]">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <h3 class="text-[#4361EE] text-[19px] leading-[29px] mb-1">Donec porttitor euismod</h3>
-            <p class="text-gray font-light text-4">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+            <h2 class=" text-[19px] leading-[29px] font-medium text-move">CHECKOUT OUR NEW</h2>
+            <p class=" text-[36px] leading-[45px] font-bold mb-[30px]">Latest Listed Properties</p>
+            <p class="text-gray">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+          </div>
+          <div class="flex justify-around mt-[50px] lg:mt-0">
+            <button class="text-move border-2 border-move rounded-full px-4 py-1">All</button>
+            <button class="text-white border-2 border-move bg-move rounded-full px-4 lg:mx-2 py-1">sell</button>
+            <button class="text-move border-2 border-move rounded-full px-4 py-1">rent</button>
           </div>
         </div>
-        <div class="flex space-x-4 lg:w-[80%] items-center bg-white">
-          <img src="images/user.png" alt="">
+        <div class="mt-[50px] space-y-8 lg:space-y-0 lg:flex gap-[50px] overflow-auto allt">
+          <div class="lg:min-w-[340px]">
+            <div class="relative">
+              <img src="images/tranquil.png" alt="">
+              <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
+                <img src="images/icons/🦆 icon _fire_.png" alt="">
+                <span class="text-[#FF1111] font-medium">Popular</span>
+              </div>
+            </div>
+            <div class="mt-[20px]">
+              <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
+              <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
+              <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
+            </div>
+            <div class="flex items-center space-x-5 mt-4">
+              <div class="flex items-center space-x-2">
+                <img src="images/icons/bed.png" alt="">
+                <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img src="images/icons/bath.png" alt="">
+                <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
+              </div>
+            </div>
+          </div>
+          <div class="lg:min-w-[340px]">
+            <div class="relative">
+              <img src="images/tranquil.png" alt="">
+              <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
+                <img src="images/icons/🦆 icon _fire_.png" alt="">
+                <span class="text-[#FF1111] font-medium">Popular</span>
+              </div>
+            </div>
+            <div class="mt-[20px]">
+              <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
+              <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
+              <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
+            </div>
+            <div class="flex items-center space-x-5 mt-4">
+              <div class="flex items-center space-x-2">
+                <img src="images/icons/bed.png" alt="">
+                <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img src="images/icons/bath.png" alt="">
+                <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
+              </div>
+            </div>
+          </div>
+          <div class="lg:min-w-[340px]">
+            <div class="relative">
+              <img src="images/tranquil.png" alt="">
+              <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
+                <img src="images/icons/🦆 icon _fire_.png" alt="">
+                <span class="text-[#FF1111] font-medium">Popular</span>
+              </div>
+            </div>
+            <div class="mt-[20px]">
+              <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
+              <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
+              <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
+            </div>
+            <div class="flex items-center space-x-5 mt-4">
+              <div class="flex items-center space-x-2">
+                <img src="images/icons/bed.png" alt="">
+                <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img src="images/icons/bath.png" alt="">
+                <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
+              </div>
+            </div>
+          </div>
+          <div class="lg:min-w-[340px]">
+            <div class="relative">
+              <img src="images/tranquil.png" alt="">
+              <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
+                <img src="images/icons/🦆 icon _fire_.png" alt="">
+                <span class="text-[#FF1111] font-medium">Popular</span>
+              </div>
+            </div>
+            <div class="mt-[20px]">
+              <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
+              <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
+              <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
+            </div>
+            <div class="flex items-center space-x-5 mt-4">
+              <div class="flex items-center space-x-2">
+                <img src="images/icons/bed.png" alt="">
+                <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img src="images/icons/bath.png" alt="">
+                <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- start services section -->
+      <div class="bg-[#D4D4D4] py-[80px]">
+        <section class="lg:px-[140px] px-[40px] text-center">
+          <h3 class="text-[#2B2B2B] text-[19px] leading-[29px] font-normal ">OUR SERVICES</h3>
+          <p class="text-[#0B090A] mt-[40px] mb-[70px] text-[39px] leading-[47px] font-semibold">Donec porttitor euismod dignissim</p>
+          <div class="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
+            <div class="bg-white p-[40px] rounded-lg">
+              <i class="ri-search-line ri-2x text-white m-auto bg-[#4361EE] p-4 rounded-full"></i>
+              <h4 class="pt-[30px] pb-[20px] text-[#2B2B2B] text-[19px] leading-[29px] font-normal">Buy a New Home</h4>
+              <p class="text-[#808080]">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+            </div>
+            <div class="bg-white p-[40px] rounded-lg">
+              <i class="ri-home-4-line ri-2x text-white m-auto bg-[#4361EE] p-4 rounded-full"></i>
+              <h4 class="pt-[30px] pb-[20px] text-[#2B2B2B] text-[19px] leading-[29px] font-normal">Buy a New Home</h4>
+              <p class="text-[#808080]">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+            </div>
+            <div class="bg-white p-[40px] rounded-lg">
+              <i class="ri-hotel-bed-fill ri-2x text-white m-auto bg-[#4361EE] p-4 rounded-full"></i>
+              <h4 class="pt-[30px] pb-[20px] text-[#2B2B2B] text-[19px] leading-[29px] font-normal">Buy a New Home</h4>
+              <p class="text-[#808080]">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+            </div>
+          </div>
+      </section>
+      </div>
+
+      <!-- end services section -->
+      <section class="lg:px-[140px] px-[40px] py-[180px]">
+        <div>
+          <h2 class="text-[#4361EE] text-[19px] mb-[20px]">AREAS ACROSS THE TOWN</h2>
+          <p class=" text-dblack font-bold text-[39px] lg:text-[47px] my-4">Neighborhood Properties</p>
+          <div class="flex flex-wrap across">
+            <div class="relative text-white lg:flex-none lg:w-[25%]" >
+              <img src="images/newyourk.png" alt="" class="w-full">
+              <div class="absolute bottom-12 left-6 lg:bottom-16 lg:left-12">
+                <span class="text-[30px] leading-[30px] lg:text-[57px] lg:leading-[66px] font-bold">216</span>
+                <p class="text-[10px] leading-[19px] lg:text-[19px] lg:leading-[29px] font-normal">New York City, NY</p>
+              </div>
+            </div>
+            <div class="relative text-white lg:flex-none lg:w-[25%]"> 
+              <img src="images/hoston.png" alt="">
+              <div class="absolute bottom-12 left-6 lg:bottom-16 lg:left-12">
+                <span class="text-[30px] leading-[30px] lg:text-[57px] lg:leading-[66px] font-bold">141</span>
+                <p class="text-[10px] leading-[19px] lg:text-[19px] lg:leading-[29px] font-normal">Houston, TX</p>
+              </div>
+            </div>
+            <div class="relative text-white lg:flex-none lg:w-[50%]"> 
+              <img src="images/sandiego.png" alt="">
+              <div class="absolute bottom-12 left-6 lg:bottom-16 lg:left-12">
+                <span class="text-[30px] leading-[30px] lg:text-[57px] lg:leading-[66px] font-bold">212</span>
+                <p class="text-[10px] leading-[19px] lg:text-[19px] lg:leading-[29px] font-normal">San Diego, CA</p>
+              </div>
+            </div>
+            <div class="relative text-white lg:flex-none lg:w-[25%]"> 
+              <img src="images/philadelphia.png" alt="">
+              <div class="absolute bottom-12 left-6 lg:bottom-16 lg:left-12">
+                <span class="text-[30px] leading-[30px] lg:text-[57px] lg:leading-[66px] font-bold">183</span>
+                <p class="text-[10px] leading-[19px] lg:text-[19px] lg:leading-[29px] font-normal">Philadelphia, PA</p>
+              </div>
+            </div>
+            <div class="relative text-white lg:flex-none lg:w-[70%]"> 
+              <img src="images/sanfran.png" alt="">
+              <div class="absolute bottom-12 left-6 lg:bottom-16 lg:left-12">
+                <span class="text-[30px] leading-[30px] lg:text-[57px] lg:leading-[66px] font-bold">112</span>
+                <p class="text-[10px] leading-[19px] lg:text-[19px] lg:leading-[29px] font-normal">San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="text-[#4361EE] text-center text-[19px] mb-[20px] mt-[80px]">Introduce yourself to </h2>
+        <p class=" text-dblack font-bold text-center text-[39px] lg:text-[47px] mt-4 mb-[100px]">Our Team of Experts</p>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <div>
-            <h3 class="text-[#4361EE] text-[19px] leading-[29px] mb-1">Donec porttitor euismod</h3>
-            <p class="text-gray font-light text-4">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+            <img src="images/brendon.png" alt="" class="m-auto">
+            <h3 class="my-[30px] text-center">Brendon M</h3>
+            <p class="text-[#4361EE] text-center">CEO & Founder</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="lg:pl-[140px] px-[40px] py-[180px]">
-      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-        <div>
-          <h2 class=" text-[19px] leading-[29px] font-medium text-move">CHECKOUT OUR NEW</h2>
-          <p class=" text-[36px] leading-[45px] font-bold mb-[30px]">Latest Listed Properties</p>
-          <p class="text-gray">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
-        </div>
-        <div class="flex justify-around mt-[50px] lg:mt-0">
-          <button class="text-move border-2 border-move rounded-full px-4 py-1">All</button>
-          <button class="text-white border-2 border-move bg-move rounded-full px-4 lg:mx-2 py-1">sell</button>
-          <button class="text-move border-2 border-move rounded-full px-4 py-1">rent</button>
-        </div>
-      </div>
-      <div class="mt-[50px] space-y-8 lg:space-y-0 lg:flex gap-[50px] overflow-auto allt">
-        <div class="lg:min-w-[340px]">
-          <div class="relative">
-            <img src="images/tranquil.png" alt="">
-            <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
-              <img src="images/icons/🦆 icon _fire_.png" alt="">
-              <span class="text-[#FF1111] font-medium">Popular</span>
-            </div>
-          </div>
-          <div class="mt-[20px]">
-            <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
-            <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
-            <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
-          </div>
-          <div class="flex items-center space-x-5 mt-4">
-            <div class="flex items-center space-x-2">
-              <img src="images/icons/bed.png" alt="">
-              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="images/icons/bath.png" alt="">
-              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
-            </div>
-          </div>
-        </div>
-        <div class="lg:min-w-[340px]">
-          <div class="relative">
-            <img src="images/tranquil.png" alt="">
-            <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
-              <img src="images/icons/🦆 icon _fire_.png" alt="">
-              <span class="text-[#FF1111] font-medium">Popular</span>
-            </div>
-          </div>
-          <div class="mt-[20px]">
-            <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
-            <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
-            <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
-          </div>
-          <div class="flex items-center space-x-5 mt-4">
-            <div class="flex items-center space-x-2">
-              <img src="images/icons/bed.png" alt="">
-              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="images/icons/bath.png" alt="">
-              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
-            </div>
-          </div>
-        </div>
-        <div class="lg:min-w-[340px]">
-          <div class="relative">
-            <img src="images/tranquil.png" alt="">
-            <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
-              <img src="images/icons/🦆 icon _fire_.png" alt="">
-              <span class="text-[#FF1111] font-medium">Popular</span>
-            </div>
-          </div>
-          <div class="mt-[20px]">
-            <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
-            <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
-            <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
-          </div>
-          <div class="flex items-center space-x-5 mt-4">
-            <div class="flex items-center space-x-2">
-              <img src="images/icons/bed.png" alt="">
-              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="images/icons/bath.png" alt="">
-              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
-            </div>
-          </div>
-        </div>
-        <div class="lg:min-w-[340px]">
-          <div class="relative">
-            <img src="images/tranquil.png" alt="">
-            <div class="absolute bottom-6 left-6 flex items-center justify-center rounded-full space-x-[10px] bg-[#FFE1E1] w-[141px] h-[42px]">
-              <img src="images/icons/🦆 icon _fire_.png" alt="">
-              <span class="text-[#FF1111] font-medium">Popular</span>
-            </div>
-          </div>
-          <div class="mt-[20px]">
-            <span class="font-bold text-[26px] leading-[40px] ">$ 5,970</span>
-            <h2 class="text-[#2B2B2B] text-[19px] leading-[29px] py-5 font-medium">Tranquil Haven in the Woods</h2>
-            <p class="text-[#808080] text-[15px] leading-[26px]">103 Wright CourtBurien, WA 98168</p>
-          </div>
-          <div class="flex items-center space-x-5 mt-4">
-            <div class="flex items-center space-x-2">
-              <img src="images/icons/bed.png" alt="">
-              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">4 Beds</h3>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="images/icons/bath.png" alt="">
-              <h3 class="text-[#2B2B2B] text-[15px] leading-[26px">3 Bath</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- start services section -->
-    <div class="bg-[#D4D4D4] py-[80px]">
-      <section class="lg:px-[140px] px-[40px] text-center">
-        <h3 class="text-[#2B2B2B] text-[19px] leading-[29px] font-normal ">OUR SERVICES</h3>
-        <p class="text-[#0B090A] mt-[40px] mb-[70px] text-[39px] leading-[47px] font-semibold">Donec porttitor euismod dignissim</p>
-        <div class="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
-          <div class="bg-white p-[40px] rounded-lg">
-            <img src="images/search.png" alt="" class="m-auto bg-[#4361EE] p-2 rounded-full">
-            <h4 class="pt-[30px] pb-[20px] text-[#2B2B2B] text-[19px] leading-[29px] font-normal">Buy a New Home</h4>
-            <p class="text-[#808080]">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
-          </div>
-          <div class="bg-white p-[40px] rounded-lg">
-            <img src="images/Vector.png" alt="" class="m-auto bg-[#4361EE] p-2 rounded-full">
-            <h4 class="pt-[30px] pb-[20px] text-[#2B2B2B] text-[19px] leading-[29px] font-normal">Buy a New Home</h4>
-            <p class="text-[#808080]">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
-          </div>
-          <div class="bg-white p-[40px] rounded-lg">
-            <img src="images/🦆 icon _bed_.png" alt="" class="m-auto w-[48px] h-[48px] bg-[#4361EE] py-4 px-2 rounded-full">
-            <h4 class="pt-[30px] pb-[20px] text-[#2B2B2B] text-[19px] leading-[29px] font-normal">Buy a New Home</h4>
-            <p class="text-[#808080]">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
-          </div>
-        </div>
-    </section>
-    </div>
-
-    <!-- end services section -->
-    <section class="lg:px-[140px] px-[40px] py-[180px]">
-      <div>
-        <h2 class="text-[#4361EE] text-[19px] mb-[20px]">AREAS ACROSS THE TOWN</h2>
-        <p class=" text-dblack font-bold text-[39px] lg:text-[47px] my-4">Neighborhood Properties</p>
-        <div class="flex flex-wrap across">
-          <div class="relative text-white lg:flex-none lg:w-[25%]" >
-            <img src="images/newyourk.png" alt="" class="w-full">
-            <div class="absolute bottom-12 left-6 lg:bottom-16 lg:left-12">
-              <span class="text-[30px] leading-[30px] lg:text-[57px] lg:leading-[66px] font-bold">216</span>
-              <p class="text-[10px] leading-[19px] lg:text-[19px] lg:leading-[29px] font-normal">New York City, NY</p>
-            </div>
-          </div>
-          <div class="relative text-white lg:flex-none lg:w-[25%]"> 
-            <img src="images/hoston.png" alt="">
-            <div class="absolute bottom-12 left-6 lg:bottom-16 lg:left-12">
-              <span class="text-[30px] leading-[30px] lg:text-[57px] lg:leading-[66px] font-bold">141</span>
-              <p class="text-[10px] leading-[19px] lg:text-[19px] lg:leading-[29px] font-normal">Houston, TX</p>
-            </div>
-          </div>
-          <div class="relative text-white lg:flex-none lg:w-[50%]"> 
-            <img src="images/sandiego.png" alt="">
-            <div class="absolute bottom-12 left-6 lg:bottom-16 lg:left-12">
-              <span class="text-[30px] leading-[30px] lg:text-[57px] lg:leading-[66px] font-bold">212</span>
-              <p class="text-[10px] leading-[19px] lg:text-[19px] lg:leading-[29px] font-normal">San Diego, CA</p>
-            </div>
-          </div>
-          <div class="relative text-white lg:flex-none lg:w-[25%]"> 
-            <img src="images/philadelphia.png" alt="">
-            <div class="absolute bottom-12 left-6 lg:bottom-16 lg:left-12">
-              <span class="text-[30px] leading-[30px] lg:text-[57px] lg:leading-[66px] font-bold">183</span>
-              <p class="text-[10px] leading-[19px] lg:text-[19px] lg:leading-[29px] font-normal">Philadelphia, PA</p>
-            </div>
-          </div>
-          <div class="relative text-white lg:flex-none lg:w-[70%]"> 
-            <img src="images/sanfran.png" alt="">
-            <div class="absolute bottom-12 left-6 lg:bottom-16 lg:left-12">
-              <span class="text-[30px] leading-[30px] lg:text-[57px] lg:leading-[66px] font-bold">112</span>
-              <p class="text-[10px] leading-[19px] lg:text-[19px] lg:leading-[29px] font-normal">San Francisco, CA</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="text-[#4361EE] text-center text-[19px] mb-[20px] mt-[80px]">Introduce yourself to </h2>
-      <p class=" text-dblack font-bold text-center text-[39px] lg:text-[47px] mt-4 mb-[100px]">Our Team of Experts</p>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <div>
-          <img src="images/brendon.png" alt="" class="m-auto">
-          <h3 class="my-[30px] text-center">Brendon M</h3>
-          <p class="text-[#4361EE] text-center">CEO & Founder</p>
-        </div>
-        <div>
-          <img src="images/jordi.png" alt="" class="m-auto">
-          <h3 class="my-[30px] text-center">Brendon M</h3>
-          <p class="text-[#4361EE] text-center">CEO & Founder</p>
-        </div>
-        <div>
-          <img src="images/justin.png" alt="" class="m-auto">
-          <h3 class="my-[30px] text-center">Brendon M</h3>
-          <p class="text-[#4361EE] text-center">CEO & Founder</p>
-        </div>
-        <div>
-          <img src="images/susan.png" alt="" class="m-auto">
-          <h3 class="my-[30px] text-center">Brendon M</h3>
-          <p class="text-[#4361EE] text-center">CEO & Founder</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-[#3A0CA3] text-white">
-      <div class="lg:px-[140px] px-[40px] py-[120px]">
-        <h2 class="text-center text-[19px] leading-[29px] font-medium">WHAT’S TRENDING</h2>
-        <p class="text-center text-[39px] leading-[47px] font-bold mb-[80px] mt-2">Latest Blogs & Posts</p>
-      <div class="flex items-center lg:gap-4 space-y-4 lg:space-y-0 flex-col lg:flex-row ">
-        <div class="relative">
-          <img src="images/top10.png" alt="" class="h-[240px]">
-          <div class="bg-white rounded-md absolute top-[14px] text-center left-16 text-dblack px-3">
-            <span class="font-bold">23</span>
-            <h2>Tue</h2>
-          </div>
-          <h3 class="font-medium text-[27px] leading-[41px] mb-5 ">Top 10 Home Buying Mistakes to Avoid</h3>
-          <p class="text-4 leading-[26px] text-[#D4D4D4] mb-[30px]">Etiam eget elementum elit. Aenean dignissim dapibus vestibulum</p>
-
-          <div class="hidden lg:inline-block absolute right-6">
-            <i class="ri-arrow-right-line ri-3x text-black bg-white rounded-full "></i>
-          </div>
-        </div>
-        <div class="relative">
-          <img src="images/howto.png" alt="" class=" h-[240px]">
-          <div class="bg-white rounded-md absolute top-[17px] text-center left-16 text-dblack px-3">
-            <span class="font-bold">08</span>
-            <h2>Man</h2>
-          </div>
-          <h3 class="font-medium text-[27px] leading-[41px] mb-5">How to Stage Your Home for a Quick Sale</h3>
-          <p class="text-4 leading-[26px] text-[#D4D4D4] mb-[30px]">Nullam odio lacus, dictum quis pretium congue, vehicula venenatis nunc.</p>
-
-          <div class= "hidden lg:inline-block absolute right-6">
-            <i class="ri-arrow-right-line ri-3x text-black bg-white rounded-full right-0"></i>
-          </div>
-        </div>
-        <div class="relative">
-          <img src="images/5tips.png" alt="" class=" h-[240px]">
-          <div class="bg-white rounded-md absolute top-[17px] text-center left-16 text-dblack px-3">
-            <span class="font-bold">26</span>
-            <h2>Wed</h2>
-          </div>
-          <h3 class="font-medium text-[27px] leading-[41px] mb-5">5 Tips for First-Time Home Sellers  </h3>
-          <p class="text-4 leading-[26px] text-[#D4D4D4] mb-[30px]">In hac habitasse platea dictumst. Phasellus vel velit vel augue maximus.</p>
-
-          <div class= "hidden lg:inline-block absolute right-6">
-            <i class="ri-arrow-right-line ri-3x text-black bg-white rounded-full right-0"></i>
-          </div>
-
-        </div>
-
-      </div>
-        <button class="lg:hidden text-[#3A0CA3] w-[195px] h-[49px] bg-white rounded-full font-medium text-4 leading-6 mt-[60px]">View more blogs</button>
-      </div>
-    </section>
-
-    <section class="lg:px-[140px] px-[40px] py-[120px]">
-      <div class="flex  flex-col md:flex-row ">
-        <div class="lg:w-[415px] pt-10">
           <div>
-            <h3 class="text-[#4361EE] text-[19px] font-medium leading-[29px] ">TESTIMONIALS</h3>
-            <p class="text-[#2B2B2B] text-[39px] font-bold leading-[47px] my-[30px]">Look What Our Customers Say!</p>
-            <span class="text-[#2B2B2B] leading-[26px] text-4">Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque. </span>
+            <img src="images/jordi.png" alt="" class="m-auto">
+            <h3 class="my-[30px] text-center">Brendon M</h3>
+            <p class="text-[#4361EE] text-center">CEO & Founder</p>
           </div>
-          <div class="mt-[61px] space-x-[50px]">
-            <a href="#"><i class="ri-arrow-left-line text-move w-[50px] ri-2x h-[50px] rounded-full p-2 border-[1px] border-move"></i></a>
-            <a href="#"><i class="ri-arrow-right-line text-move w-[50px] ri-2x h-[50px] rounded-full p-2 border-[1px] border-move"></i></a>
+          <div>
+            <img src="images/justin.png" alt="" class="m-auto">
+            <h3 class="my-[30px] text-center">Brendon M</h3>
+            <p class="text-[#4361EE] text-center">CEO & Founder</p>
+          </div>
+          <div>
+            <img src="images/susan.png" alt="" class="m-auto">
+            <h3 class="my-[30px] text-center">Brendon M</h3>
+            <p class="text-[#4361EE] text-center">CEO & Founder</p>
           </div>
         </div>
-        <div class="md:flex items-center ">
-          <img src="images/avis.png" alt="">
-          <img src="images/scroll.png" alt="" class="hidden md:block">
-          <img src="images/scroll2png.png" alt="" class="md:hidden m-auto">
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="lg:px-[140px] px-[40px] my-[120px]">
-      <div class="bg-[#3A0CA3] text-white lg:flex lg:flex-row-reverse lg:pr-[188px] items-center rounded-[40px] lg:h-[260px]">
-        
-        <div class="lg:flex items-center lg:space-x-[17px] py-[80px] pl-[30px]">  
-          <div class="lg:w-[384px]">
-            <h2 class="text-[27px] leading-[41px] lg:text-[39px] lg:leading-[46px] font-bold">Become a Agent.</h2>
-            <p class="text-[13px] leading-[22px] lg:text-[16px] lg:leading-[26px] font-normal my-[30px]">Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque. </p>
+      <section class="bg-[#3A0CA3] text-white">
+        <div class="lg:px-[140px] px-[40px] py-[120px]">
+          <h2 class="text-center text-[19px] leading-[29px] font-medium">WHAT’S TRENDING</h2>
+          <p class="text-center text-[39px] leading-[47px] font-bold mb-[80px] mt-2">Latest Blogs & Posts</p>
+        <div class="flex items-center lg:gap-4 space-y-4 lg:space-y-0 flex-col lg:flex-row ">
+          <div class="relative">
+            <img src="images/top10.png" alt="" class="h-[240px]">
+            <div class="bg-white rounded-md absolute top-[14px] text-center left-16 text-dblack px-3">
+              <span class="font-bold">23</span>
+              <h2>Tue</h2>
+            </div>
+            <h3 class="font-medium text-[27px] leading-[41px] mb-5 ">Top 10 Home Buying Mistakes to Avoid</h3>
+            <p class="text-4 leading-[26px] text-[#D4D4D4] mb-[30px]">Etiam eget elementum elit. Aenean dignissim dapibus vestibulum</p>
+
+            <div class="hidden lg:inline-block absolute right-6">
+              <i class="ri-arrow-right-line ri-3x text-black bg-white rounded-full "></i>
+            </div>
           </div>
-          <button class="px-[30px] bg-white py-[19px] lg:py-0 text-move rounded-full lg:w-[165px] lg:h-[49px]">Register Now</button>
+          <div class="relative">
+            <img src="images/howto.png" alt="" class=" h-[240px]">
+            <div class="bg-white rounded-md absolute top-[17px] text-center left-16 text-dblack px-3">
+              <span class="font-bold">08</span>
+              <h2>Man</h2>
+            </div>
+            <h3 class="font-medium text-[27px] leading-[41px] mb-5">How to Stage Your Home for a Quick Sale</h3>
+            <p class="text-4 leading-[26px] text-[#D4D4D4] mb-[30px]">Nullam odio lacus, dictum quis pretium congue, vehicula venenatis nunc.</p>
+
+            <div class= "hidden lg:inline-block absolute right-6">
+              <i class="ri-arrow-right-line ri-3x text-black bg-white rounded-full right-0"></i>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="images/5tips.png" alt="" class=" h-[240px]">
+            <div class="bg-white rounded-md absolute top-[17px] text-center left-16 text-dblack px-3">
+              <span class="font-bold">26</span>
+              <h2>Wed</h2>
+            </div>
+            <h3 class="font-medium text-[27px] leading-[41px] mb-5">5 Tips for First-Time Home Sellers  </h3>
+            <p class="text-4 leading-[26px] text-[#D4D4D4] mb-[30px]">In hac habitasse platea dictumst. Phasellus vel velit vel augue maximus.</p>
+
+            <div class= "hidden lg:inline-block absolute right-6">
+              <i class="ri-arrow-right-line ri-3x text-black bg-white rounded-full right-0"></i>
+            </div>
+
+          </div>
+
         </div>
-        <div class="pt-[40px] lg:pt-0 lg:w-[358px]">
-          <img src="images/unsplash_7uoMmzPd2JA.png" alt="" class="lg:h-[303px] mt-[-44px]">
+          <button class="lg:hidden text-[#3A0CA3] w-[195px] h-[49px] bg-white rounded-full font-medium text-4 leading-6 mt-[60px]">View more blogs</button>
         </div>
+      </section>
+
+      <section class="lg:px-[140px] px-[40px] py-[120px]">
+        <div class="flex  flex-col md:flex-row ">
+          <div class="lg:w-[415px] pt-10">
+            <div>
+              <h3 class="text-[#4361EE] text-[19px] font-medium leading-[29px] ">TESTIMONIALS</h3>
+              <p class="text-[#2B2B2B] text-[39px] font-bold leading-[47px] my-[30px]">Look What Our Customers Say!</p>
+              <span class="text-[#2B2B2B] leading-[26px] text-4">Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque. </span>
+            </div>
+            <div class="mt-[61px] space-x-[50px]">
+              <a href="#"><i class="ri-arrow-left-line text-move w-[50px] ri-2x h-[50px] rounded-full p-2 border-[1px] border-move"></i></a>
+              <a href="#"><i class="ri-arrow-right-line text-move w-[50px] ri-2x h-[50px] rounded-full p-2 border-[1px] border-move"></i></a>
+            </div>
+          </div>
+          <div class="md:flex items-center ">
+            <img src="images/avis.png" alt="">
+            <img src="images/scroll.png" alt="" class="hidden md:block">
+            <img src="images/scroll2png.png" alt="" class="md:hidden m-auto">
+          </div>
+        </div>
+      </section>
+
+      <section class="lg:px-[140px] px-[40px] my-[120px]">
+        <div class="bg-[#3A0CA3] text-white lg:flex lg:flex-row-reverse lg:pr-[188px] items-center rounded-[40px] lg:h-[260px]">
+          
+          <div class="lg:flex items-center lg:space-x-[17px] py-[80px] pl-[30px]">  
+            <div class="lg:w-[384px]">
+              <h2 class="text-[27px] leading-[41px] lg:text-[39px] lg:leading-[46px] font-bold">Become a Agent.</h2>
+              <p class="text-[13px] leading-[22px] lg:text-[16px] lg:leading-[26px] font-normal my-[30px]">Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque. </p>
+            </div>
+            <button class="px-[30px] bg-white py-[19px] lg:py-0 text-move rounded-full lg:w-[165px] lg:h-[49px]">Register Now</button>
+          </div>
+          <div class="pt-[40px] lg:pt-0 lg:w-[358px]">
+            <img src="images/unsplash_7uoMmzPd2JA.png" alt="" class="lg:h-[303px] mt-[-44px]">
+          </div>
 
 
-      </div>
-    </section>
-    <footer class="bg-[#4361EE]/10 text-center md:text-left py-[100px] lg:px-[140px] px-[40px] lg:flex gap-[100px]">
-      <div >
-        <div>
-          <a href="#" class="font-semibold text-[20px]"><i class="ri-home-8-line mr-2 text-white bg-move rounded-full p-1 "></i>Rezilla</a>
         </div>
-        
-        <p class="mt-[32px] mb-[48px]">2728 Hickory StreetSalt <br> Lake City, UT 84104</p>
-        <span class="mb-[30px]"><i class="ri-phone-line"></i> +1 206-214-2298 </span><br>
-        <span><i class="ri-mail-line"></i>  support@rezilla.com</span>
-      </div>
+      </section>
+      <footer class="bg-[#4361EE]/10 text-center md:text-left py-[100px] lg:px-[140px] px-[40px] lg:flex gap-[100px]">
+        <div >
+          <div>
+            <a href="#" class="font-semibold text-[20px]"><i class="ri-home-8-line mr-2 text-white bg-move rounded-full p-1 "></i>Rezilla</a>
+          </div>
+          
+          <p class="mt-[32px] mb-[48px]">2728 Hickory StreetSalt <br> Lake City, UT 84104</p>
+          <span class="mb-[30px]"><i class="ri-phone-line"></i> +1 206-214-2298 </span><br>
+          <span><i class="ri-mail-line"></i>  support@rezilla.com</span>
+        </div>
 
-      <div class=" hidden md:flex lg:gap-[80px]">
-        <ul class="leading-[22px]">
-          <h4 class=" text-[19px] font-medium leading-normal mb-[20px]">Quick links</h4>
-          <ul class="space-y-[10px]">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Listings</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Become a Agent</a></li>
+        <div class=" hidden md:flex lg:gap-[80px]">
+          <ul class="leading-[22px]">
+            <h4 class=" text-[19px] font-medium leading-normal mb-[20px]">Quick links</h4>
+            <ul class="space-y-[10px]">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Listings</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Become a Agent</a></li>
+            </ul>
           </ul>
-        </ul>
-  
-        <ul class="leading-[22px]">
-          <h4 class=" text-[19px] font-medium leading-normal mb-[20px]">Discovery</h4>
-          <ul class="space-y-[10px]">
-            <li><a href="#">Canada</a></li>
-            <li><a href="#">United States</a></li>
-            <li><a href="#">Germany</a></li>
-            <li><a href="#">Africa</a></li>
-            <li><a href="#">India</a></li>
+    
+          <ul class="leading-[22px]">
+            <h4 class=" text-[19px] font-medium leading-normal mb-[20px]">Discovery</h4>
+            <ul class="space-y-[10px]">
+              <li><a href="#">Canada</a></li>
+              <li><a href="#">United States</a></li>
+              <li><a href="#">Germany</a></li>
+              <li><a href="#">Africa</a></li>
+              <li><a href="#">India</a></li>
+            </ul>
           </ul>
-        </ul>
-      </div>
-      <div class="mt-5 md:mt-0">
-        <p class="text-[#0B090A] mb-[21px] font-medium text-[19px] leading-[29px] lg:w-[200px]">Subscribe to our Newsletter!</p>
-        <div class="bg-white  pl-5 rounded-full flex pr-4 py-[15px]">
-          <input type="email" required placeholder="Email address" class="outline-none border-none">
-          <a href="#"><i class="ri-arrow-right-line bg-[#3A0CA3] py-[14px] px-[15px] rounded-full text-white" aria-hidden="true"></i></a>
         </div>
-        <p class="text-[#0B090A] mt-[30px] font-medium text-[19px] leading-[29px]">follow us on</p>
-        <div>
-          <i class="ri-linkedin-fill text-move ri-2x"></i>
-          <i class="ri-facebook-fill text-move ri-2x"></i>
-          <i class="ri-instagram-line text-move ri-2x"></i>
+        <div class="mt-5 md:mt-0">
+          <p class="text-[#0B090A] mb-[21px] font-medium text-[19px] leading-[29px] lg:w-[200px]">Subscribe to our Newsletter!</p>
+          <div class="bg-white  pl-5 rounded-full flex pr-4 py-[15px]">
+            <input type="email" required placeholder="Email address" class="outline-none border-none">
+            <a href="#"><i class="ri-arrow-right-line bg-[#3A0CA3] py-[14px] px-[15px] rounded-full text-white" aria-hidden="true"></i></a>
+          </div>
+          <p class="text-[#0B090A] mt-[30px] font-medium text-[19px] leading-[29px]">follow us on</p>
+          <div>
+            <i class="ri-linkedin-fill text-move ri-2x"></i>
+            <i class="ri-facebook-fill text-move ri-2x"></i>
+            <i class="ri-instagram-line text-move ri-2x"></i>
+          </div>
         </div>
-      </div>
-    </footer>
-    <section class="bg-[#0B090A] text-[#AAAAAA] text-[13px] leading-[22px] py-[15px] flex justify-center gap-[440px]">
-      <p>&copy;  Rezilla - All rights reserved</p>
-      <div class="hidden md:flex gap-[40px]">
-        <p>Terms and Conditions</p>
-        <p>Privacy Policy</p>
-        <p>Disclaimer</p>
-      </div>
-    </section>
-    <script src="script.js"></script>
-</body>
+      </footer>
+      <section class="bg-[#0B090A] text-[#AAAAAA] text-[13px] leading-[22px] py-[15px] flex justify-center gap-[440px]">
+        <p>&copy;  Rezilla - All rights reserved</p>
+        <div class="hidden md:flex gap-[40px]">
+          <p>Terms and Conditions</p>
+          <p>Privacy Policy</p>
+          <p>Disclaimer</p>
+        </div>
+      </section>
+      <script src="script.js"></script>
+  </body>
 </html>
