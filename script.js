@@ -7,7 +7,15 @@ let saleForm = document.querySelector("#saleForm");
 let rentForm = document.querySelector("#rentForm");
 let saleSearch = document.querySelector('#salesearch');
 let rentSearch = document.querySelector('#rentsearch');
+let imgs = document.querySelectorAll("#slide-images img");
+let prev2 = document.getElementById('prev2');
+let next2 = document.getElementById('next2');
+let indicators = document.querySelectorAll('#indicators .indicator');
 
+let slideIndexe = 0;
+let intervalIndex = null;
+
+initialSlide();
 
 document.getElementById("propertyForm").addEventListener("submit", function(event) {
     var propertyType = document.getElementById("propertyType").value;
@@ -138,6 +146,57 @@ saleBtn.addEventListener('click', ()=> {
 })
 
 
+function initialSlide() {
+    if (imgs.length > 0) {
+        imgs[slideIndexe].classList.remove('hidden');
+        indicators[slideIndexe].classList.add('active');
+        intervalIndex = setInterval(nextSlide, 5000);
+    }
+}
 
+function shSlider(index) {
+    if (index >= imgs.length) {
+        slideIndexe = 0;
+    } else if (index < 0) {
+        slideIndexe = imgs.length - 1;
+    } else {
+        slideIndexe = index;
+    }
 
+    imgs.forEach(slide => {
+        slide.classList.add('hidden');
+    });
+    imgs[slideIndexe].classList.remove('hidden');
 
+    indicators.forEach(indicator => {
+        indicator.classList.remove('active');
+    });
+    indicators[slideIndexe].classList.add('active');
+}
+
+prev2.addEventListener('click', () => {
+    slideIndexe--;
+    shSlider(slideIndexe);
+    resetInterval();
+});
+
+next2.addEventListener('click', nextSlide);
+
+function nextSlide() {
+    slideIndexe++;
+    shSlider(slideIndexe);
+    resetInterval();
+}
+
+indicators.forEach(indicator => {
+    indicator.addEventListener('click', (e) => {
+        const index = parseInt(e.target.getAttribute('data-index'));
+        shSlider(index);
+        resetInterval();
+    });
+});
+
+function resetInterval() {
+    clearInterval(intervalIndex);
+    intervalIndex = setInterval(nextSlide, 5000);
+}

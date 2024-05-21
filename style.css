@@ -1,18 +1,21 @@
 
 .slider {
+    position: relative;
     overflow: hidden;
     width: 100%;
+   
 }
 
 .slides {
     display: flex;
     transition: transform 0.5s ease;
+    
 }
 
 .slide {
     min-width: 100%;
-
 }
+
 
 
 .section {
@@ -143,4 +146,21 @@ form input{
     border-radius: 50%;
     background: linear-gradient(to top, #b1c7f2, #4361EE);
     opacity: 50%;
+}
+
+.indicator {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.indicator.active {
+    background-color: #272728;
+}
+
+#slide-images img.hidden{
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from{opacity: .5}
+    to{opacity: 1}
 }
