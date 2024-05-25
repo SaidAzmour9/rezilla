@@ -180,9 +180,9 @@ prev2.addEventListener('click', () => {
     resetInterval();
 });
 
-next2.addEventListener('click', nextSlide);
+next2.addEventListener('click', nextoSlide);
 
-function nextSlide() {
+function nextoSlide() {
     slideIndexe++;
     shSlider(slideIndexe);
     resetInterval();
