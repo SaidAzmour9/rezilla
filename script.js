@@ -200,35 +200,3 @@ function resetInterval() {
     clearInterval(intervalIndex);
     intervalIndex = setInterval(nextSlide, 5000);
 }
-
-
-
-
-
-#!/bin/bash
-
-# دالة للتحقق مما إذا كان الملف تنفيذياً وليس مجلداً
-is_executable_file() {
-    [ -f "$1" ] && [ -x "$1" ]
-}
-
-# التحقق من وجود ملفات .py في الدليل الحالي
-shopt -s nullglob
-pyfiles=(*.py)
-shopt -u nullglob
-
-# التحقق مما إذا كانت هناك ملفات .py
-if [ ${#pyfiles[@]} -eq 0 ]; then
-    echo "لا توجد ملفات .py في الدليل الحالي."
-    exit 0
-fi
-
-for pyfile in "${pyfiles[@]}"; do
-    base="${pyfile%.py}"
-    if is_executable_file "$base"; then
-        echo "يتم حذف الملف التنفيذي: $base"
-        rm "$base"
-    fi
-done
-
-echo "اكتمل التنظيف."
